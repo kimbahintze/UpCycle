@@ -8,20 +8,42 @@
 
 /* Begin PBXBuildFile section */
 		FFB717F520C5BFBA00AD5645 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB717F420C5BFBA00AD5645 /* AppDelegate.swift */; };
-		FFB717F720C5BFBA00AD5645 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB717F620C5BFBA00AD5645 /* ViewController.swift */; };
 		FFB717FA20C5BFBA00AD5645 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFB717F820C5BFBA00AD5645 /* Main.storyboard */; };
 		FFB717FC20C5BFBB00AD5645 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFB717FB20C5BFBB00AD5645 /* Assets.xcassets */; };
 		FFB717FF20C5BFBB00AD5645 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFB717FD20C5BFBB00AD5645 /* LaunchScreen.storyboard */; };
+		FFB7180720C5D1A700AD5645 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB7180620C5D1A700AD5645 /* MapViewController.swift */; };
+		FFB7180920C5D1D500AD5645 /* RecycleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB7180820C5D1D500AD5645 /* RecycleViewController.swift */; };
+		FFB7180B20C5D1E600AD5645 /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB7180A20C5D1E600AD5645 /* ShopViewController.swift */; };
+		FFB7180D20C5D1FF00AD5645 /* ReuseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB7180C20C5D1FF00AD5645 /* ReuseViewController.swift */; };
+		FFB7180F20C5D21300AD5645 /* ViewProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB7180E20C5D21300AD5645 /* ViewProjectViewController.swift */; };
+		FFB7181120C5D22400AD5645 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB7181020C5D22400AD5645 /* LoginViewController.swift */; };
+		FFB7181320C5D23C00AD5645 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB7181220C5D23C00AD5645 /* SignUpViewController.swift */; };
+		FFB7181520C5D25300AD5645 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB7181420C5D25300AD5645 /* PostViewController.swift */; };
+		FFB7181A20C5D2DF00AD5645 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB7181920C5D2DF00AD5645 /* HomeViewController.swift */; };
+		FFB7181C20C5DBB000AD5645 /* UserAgreementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB7181B20C5DBB000AD5645 /* UserAgreementViewController.swift */; };
+		FFB7182020C725E000AD5645 /* RecycleCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB7181F20C725E000AD5645 /* RecycleCenter.swift */; };
+		FFB7182220C73C0700AD5645 /* RecycleCenterMoCo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB7182120C73C0700AD5645 /* RecycleCenterMoCo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FFB717F120C5BFB900AD5645 /* UpCycle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UpCycle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFB717F420C5BFBA00AD5645 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FFB717F620C5BFBA00AD5645 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FFB717F920C5BFBA00AD5645 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FFB717FB20C5BFBB00AD5645 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FFB717FE20C5BFBB00AD5645 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FFB7180020C5BFBB00AD5645 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FFB7180620C5D1A700AD5645 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		FFB7180820C5D1D500AD5645 /* RecycleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecycleViewController.swift; sourceTree = "<group>"; };
+		FFB7180A20C5D1E600AD5645 /* ShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
+		FFB7180C20C5D1FF00AD5645 /* ReuseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReuseViewController.swift; sourceTree = "<group>"; };
+		FFB7180E20C5D21300AD5645 /* ViewProjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewProjectViewController.swift; sourceTree = "<group>"; };
+		FFB7181020C5D22400AD5645 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		FFB7181220C5D23C00AD5645 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		FFB7181420C5D25300AD5645 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
+		FFB7181920C5D2DF00AD5645 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		FFB7181B20C5DBB000AD5645 /* UserAgreementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAgreementViewController.swift; sourceTree = "<group>"; };
+		FFB7181F20C725E000AD5645 /* RecycleCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecycleCenter.swift; sourceTree = "<group>"; };
+		FFB7182120C73C0700AD5645 /* RecycleCenterMoCo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecycleCenterMoCo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +76,65 @@
 		FFB717F320C5BFBA00AD5645 /* UpCycle */ = {
 			isa = PBXGroup;
 			children = (
+				FFB7181D20C6E77300AD5645 /* Model */,
+				FFB7181E20C6E78100AD5645 /* Model Controller */,
+				FFB7181820C5D2A800AD5645 /* Views */,
+				FFB7181620C5D26E00AD5645 /* View Controllers */,
+				FFB7181720C5D29700AD5645 /* Resources */,
+			);
+			path = UpCycle;
+			sourceTree = "<group>";
+		};
+		FFB7181620C5D26E00AD5645 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FFB7180620C5D1A700AD5645 /* MapViewController.swift */,
+				FFB7180820C5D1D500AD5645 /* RecycleViewController.swift */,
+				FFB7180A20C5D1E600AD5645 /* ShopViewController.swift */,
+				FFB7180C20C5D1FF00AD5645 /* ReuseViewController.swift */,
+				FFB7180E20C5D21300AD5645 /* ViewProjectViewController.swift */,
+				FFB7181020C5D22400AD5645 /* LoginViewController.swift */,
+				FFB7181220C5D23C00AD5645 /* SignUpViewController.swift */,
+				FFB7181420C5D25300AD5645 /* PostViewController.swift */,
+				FFB7181920C5D2DF00AD5645 /* HomeViewController.swift */,
+				FFB7181B20C5DBB000AD5645 /* UserAgreementViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		FFB7181720C5D29700AD5645 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				FFB717F420C5BFBA00AD5645 /* AppDelegate.swift */,
-				FFB717F620C5BFBA00AD5645 /* ViewController.swift */,
-				FFB717F820C5BFBA00AD5645 /* Main.storyboard */,
 				FFB717FB20C5BFBB00AD5645 /* Assets.xcassets */,
 				FFB717FD20C5BFBB00AD5645 /* LaunchScreen.storyboard */,
 				FFB7180020C5BFBB00AD5645 /* Info.plist */,
 			);
-			path = UpCycle;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		FFB7181820C5D2A800AD5645 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FFB717F820C5BFBA00AD5645 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FFB7181D20C6E77300AD5645 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FFB7181F20C725E000AD5645 /* RecycleCenter.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FFB7181E20C6E78100AD5645 /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FFB7182120C73C0700AD5645 /* RecycleCenterMoCo.swift */,
+			);
+			path = "Model Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +208,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FFB717F720C5BFBA00AD5645 /* ViewController.swift in Sources */,
+				FFB7182220C73C0700AD5645 /* RecycleCenterMoCo.swift in Sources */,
+				FFB7180920C5D1D500AD5645 /* RecycleViewController.swift in Sources */,
+				FFB7180B20C5D1E600AD5645 /* ShopViewController.swift in Sources */,
+				FFB7182020C725E000AD5645 /* RecycleCenter.swift in Sources */,
+				FFB7180F20C5D21300AD5645 /* ViewProjectViewController.swift in Sources */,
+				FFB7181520C5D25300AD5645 /* PostViewController.swift in Sources */,
+				FFB7181C20C5DBB000AD5645 /* UserAgreementViewController.swift in Sources */,
+				FFB7181120C5D22400AD5645 /* LoginViewController.swift in Sources */,
+				FFB7181A20C5D2DF00AD5645 /* HomeViewController.swift in Sources */,
+				FFB7180D20C5D1FF00AD5645 /* ReuseViewController.swift in Sources */,
+				FFB7181320C5D23C00AD5645 /* SignUpViewController.swift in Sources */,
+				FFB7180720C5D1A700AD5645 /* MapViewController.swift in Sources */,
 				FFB717F520C5BFBA00AD5645 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,7 +366,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A6SH4SB8PT;
-				INFOPLIST_FILE = UpCycle/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/UpCycle/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -300,7 +384,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A6SH4SB8PT;
-				INFOPLIST_FILE = UpCycle/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/UpCycle/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
