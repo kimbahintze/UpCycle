@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		858ABE970D796E12C7AAEC1D /* Pods_UpCycle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C02049D01D619CB61DFEE4B /* Pods_UpCycle.framework */; };
 		FFB717F520C5BFBA00AD5645 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB717F420C5BFBA00AD5645 /* AppDelegate.swift */; };
 		FFB717FA20C5BFBA00AD5645 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFB717F820C5BFBA00AD5645 /* Main.storyboard */; };
 		FFB717FC20C5BFBB00AD5645 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFB717FB20C5BFBB00AD5645 /* Assets.xcassets */; };
@@ -23,9 +24,13 @@
 		FFB7181C20C5DBB000AD5645 /* UserAgreementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB7181B20C5DBB000AD5645 /* UserAgreementViewController.swift */; };
 		FFB7182020C725E000AD5645 /* RecycleCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB7181F20C725E000AD5645 /* RecycleCenter.swift */; };
 		FFB7182220C73C0700AD5645 /* RecycleCenterMoCo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB7182120C73C0700AD5645 /* RecycleCenterMoCo.swift */; };
+		FFB7182420C7760700AD5645 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FFB7182320C7760600AD5645 /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3288FA84EBCD6795D73A56FD /* Pods-UpCycle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UpCycle.release.xcconfig"; path = "Pods/Target Support Files/Pods-UpCycle/Pods-UpCycle.release.xcconfig"; sourceTree = "<group>"; };
+		3C02049D01D619CB61DFEE4B /* Pods_UpCycle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UpCycle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AC578AE0F3820E8CC7612B7 /* Pods-UpCycle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UpCycle.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UpCycle/Pods-UpCycle.debug.xcconfig"; sourceTree = "<group>"; };
 		FFB717F120C5BFB900AD5645 /* UpCycle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UpCycle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFB717F420C5BFBA00AD5645 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFB717F920C5BFBA00AD5645 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -44,6 +49,7 @@
 		FFB7181B20C5DBB000AD5645 /* UserAgreementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAgreementViewController.swift; sourceTree = "<group>"; };
 		FFB7181F20C725E000AD5645 /* RecycleCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecycleCenter.swift; sourceTree = "<group>"; };
 		FFB7182120C73C0700AD5645 /* RecycleCenterMoCo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecycleCenterMoCo.swift; sourceTree = "<group>"; };
+		FFB7182320C7760600AD5645 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,17 +57,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				858ABE970D796E12C7AAEC1D /* Pods_UpCycle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		69210D5A1AE5BA69B89BDF3A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3C02049D01D619CB61DFEE4B /* Pods_UpCycle.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F8C576C4DC13FAA45C5FE7FD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9AC578AE0F3820E8CC7612B7 /* Pods-UpCycle.debug.xcconfig */,
+				3288FA84EBCD6795D73A56FD /* Pods-UpCycle.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		FFB717E820C5BFB900AD5645 = {
 			isa = PBXGroup;
 			children = (
+				FFB7182320C7760600AD5645 /* Default-568h@2x.png */,
 				FFB717F320C5BFBA00AD5645 /* UpCycle */,
 				FFB717F220C5BFB900AD5645 /* Products */,
+				F8C576C4DC13FAA45C5FE7FD /* Pods */,
+				69210D5A1AE5BA69B89BDF3A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -144,9 +171,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FFB7180320C5BFBB00AD5645 /* Build configuration list for PBXNativeTarget "UpCycle" */;
 			buildPhases = (
+				B247DDE50D4B6BA67562AD18 /* [CP] Check Pods Manifest.lock */,
 				FFB717ED20C5BFB900AD5645 /* Sources */,
 				FFB717EE20C5BFB900AD5645 /* Frameworks */,
 				FFB717EF20C5BFB900AD5645 /* Resources */,
+				171F9244F13B6C6F2781200D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -196,12 +225,54 @@
 			buildActionMask = 2147483647;
 			files = (
 				FFB717FF20C5BFBB00AD5645 /* LaunchScreen.storyboard in Resources */,
+				FFB7182420C7760700AD5645 /* Default-568h@2x.png in Resources */,
 				FFB717FC20C5BFBB00AD5645 /* Assets.xcassets in Resources */,
 				FFB717FA20C5BFBA00AD5645 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		171F9244F13B6C6F2781200D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-UpCycle/Pods-UpCycle-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UpCycle/Pods-UpCycle-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B247DDE50D4B6BA67562AD18 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-UpCycle-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FFB717ED20C5BFB900AD5645 /* Sources */ = {
@@ -362,6 +433,7 @@
 		};
 		FFB7180420C5BFBB00AD5645 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9AC578AE0F3820E8CC7612B7 /* Pods-UpCycle.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -380,6 +452,7 @@
 		};
 		FFB7180520C5BFBB00AD5645 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3288FA84EBCD6795D73A56FD /* Pods-UpCycle.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
