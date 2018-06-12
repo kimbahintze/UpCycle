@@ -650,7 +650,7 @@ If you have any questions about this Agreement, please contact us.</mutableStrin
             </objects>
             <point key="canvasLocation" x="1132" y="1058"/>
         </scene>
-        <!--Reuse View Controller-->
+        <!--Title-->
         <scene sceneID="w71-tR-c0L">
             <objects>
                 <viewController id="Bsm-S7-83k" customClass="ReuseViewController" customModule="UpCycle" customModuleProvider="target" sceneMemberID="viewController">
@@ -659,7 +659,7 @@ If you have any questions about this Agreement, please contact us.</mutableStrin
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="rVc-I2-nW9">
-                                <rect key="frame" x="0.0" y="108" width="375" height="510"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Cvo-go-KkW">
                                     <size key="itemSize" width="50" height="50"/>
@@ -681,35 +681,23 @@ If you have any questions about this Agreement, please contact us.</mutableStrin
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nI0-G3-tsT">
-                                <rect key="frame" x="0.0" y="64" width="375" height="44"/>
-                                <items>
-                                    <navigationItem title="Title" id="uhP-wo-7Oi">
-                                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="VUW-n7-mxT">
-                                            <connections>
-                                                <segue destination="xva-uC-xrD" kind="show" id="W6W-yN-VWd"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="rVc-I2-nW9" firstAttribute="leading" secondItem="0Y8-wx-h2g" secondAttribute="leading" id="4TN-06-KTd"/>
                             <constraint firstItem="0Y8-wx-h2g" firstAttribute="bottom" secondItem="rVc-I2-nW9" secondAttribute="bottom" id="6xD-uH-ZGt"/>
                             <constraint firstItem="0Y8-wx-h2g" firstAttribute="trailing" secondItem="rVc-I2-nW9" secondAttribute="trailing" id="9ng-o3-oq9"/>
-                            <constraint firstItem="rVc-I2-nW9" firstAttribute="leading" secondItem="0Y8-wx-h2g" secondAttribute="leading" id="NwD-kR-IfR"/>
-                            <constraint firstItem="rVc-I2-nW9" firstAttribute="top" secondItem="nI0-G3-tsT" secondAttribute="bottom" id="VTi-TW-8YQ"/>
-                            <constraint firstItem="nI0-G3-tsT" firstAttribute="trailing" secondItem="0Y8-wx-h2g" secondAttribute="trailing" id="eZJ-X2-mOb"/>
-                            <constraint firstItem="rVc-I2-nW9" firstAttribute="bottom" secondItem="0Y8-wx-h2g" secondAttribute="bottom" id="gs5-ZO-gu0"/>
-                            <constraint firstItem="nI0-G3-tsT" firstAttribute="leading" secondItem="0Y8-wx-h2g" secondAttribute="leading" id="ohs-qB-guN"/>
-                            <constraint firstItem="rVc-I2-nW9" firstAttribute="trailing" secondItem="0Y8-wx-h2g" secondAttribute="trailing" id="pYr-h8-QzN"/>
-                            <constraint firstItem="rVc-I2-nW9" firstAttribute="top" secondItem="nI0-G3-tsT" secondAttribute="bottom" id="un0-1q-xOl"/>
-                            <constraint firstItem="nI0-G3-tsT" firstAttribute="top" secondItem="0Y8-wx-h2g" secondAttribute="top" id="x0P-Vp-xdn"/>
+                            <constraint firstItem="rVc-I2-nW9" firstAttribute="top" secondItem="0Y8-wx-h2g" secondAttribute="top" id="QAW-Q5-cVH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0Y8-wx-h2g"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="uhP-wo-7Oi">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="VUW-n7-mxT">
+                            <connections>
+                                <segue destination="xva-uC-xrD" kind="show" id="W6W-yN-VWd"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="viewProjectsCollectionView" destination="rVc-I2-nW9" id="Pgj-3G-vgP"/>
