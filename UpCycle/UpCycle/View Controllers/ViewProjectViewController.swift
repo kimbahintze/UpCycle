@@ -9,17 +9,18 @@
 import UIKit
 
 class ViewProjectViewController: UIViewController {
-
+    
+    // MARK: - Outlets
+    @IBOutlet weak var projectImage: UIImageView!
+    @IBOutlet weak var projectTitleLabel: UILabel!
+    @IBOutlet weak var projectInstructionsLabel: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+       setFonts()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
 
     /*
@@ -31,5 +32,9 @@ class ViewProjectViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    
+    func setFonts() {
+        projectTitleLabel.font = UIFont(name: "MontserratAlternates-ExtraBold", size: 14)
+        projectInstructionsLabel.font = UIFont(name: "Montserrat-Thin", size: 11)
+    }
 }

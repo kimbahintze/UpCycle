@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		858ABE970D796E12C7AAEC1D /* Pods_UpCycle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C02049D01D619CB61DFEE4B /* Pods_UpCycle.framework */; };
+		FF8B63E220CF39E4004ABD39 /* Montserrat-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = FF8B63DF20CF39E3004ABD39 /* Montserrat-Thin.otf */; };
+		FF8B63E320CF39E4004ABD39 /* MontserratAlternates-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = FF8B63E020CF39E3004ABD39 /* MontserratAlternates-ExtraBold.otf */; };
+		FF8B63E420CF39E4004ABD39 /* Montserrat-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = FF8B63E120CF39E3004ABD39 /* Montserrat-Medium.otf */; };
+		FF8B63E620CF3A67004ABD39 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8B63E520CF3A67004ABD39 /* Constants.swift */; };
+		FF8B63E720CF4AE2004ABD39 /* Constants.swift in Resources */ = {isa = PBXBuildFile; fileRef = FF8B63E520CF3A67004ABD39 /* Constants.swift */; };
 		FFB717F520C5BFBA00AD5645 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB717F420C5BFBA00AD5645 /* AppDelegate.swift */; };
 		FFB717FA20C5BFBA00AD5645 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFB717F820C5BFBA00AD5645 /* Main.storyboard */; };
 		FFB717FC20C5BFBB00AD5645 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFB717FB20C5BFBB00AD5645 /* Assets.xcassets */; };
@@ -23,20 +28,29 @@
 		FFB7181A20C5D2DF00AD5645 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB7181920C5D2DF00AD5645 /* HomeViewController.swift */; };
 		FFB7181C20C5DBB000AD5645 /* UserAgreementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB7181B20C5DBB000AD5645 /* UserAgreementViewController.swift */; };
 		FFB7182020C725E000AD5645 /* RecycleCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB7181F20C725E000AD5645 /* RecycleCenter.swift */; };
-		FFB7182220C73C0700AD5645 /* RecycleCenterMoCo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB7182120C73C0700AD5645 /* RecycleCenterMoCo.swift */; };
+		FFB7182220C73C0700AD5645 /* RecycleCenterMC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB7182120C73C0700AD5645 /* RecycleCenterMC.swift */; };
 		FFB7182420C7760700AD5645 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FFB7182320C7760600AD5645 /* Default-568h@2x.png */; };
+		FFDD068E20CED44800E65BD5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FFDD068D20CED44800E65BD5 /* GoogleService-Info.plist */; };
+		FFDD069020CED4DE00E65BD5 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FFDD068F20CED4DE00E65BD5 /* Info.plist */; };
+		FFF112CE20CAE6190077C900 /* PlacePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF112CD20CAE6190077C900 /* PlacePickerViewController.swift */; };
+		FFF112D220CAF6060077C900 /* HowToRecycleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF112D120CAF6060077C900 /* HowToRecycleTableViewCell.swift */; };
+		FFF112D420CAF6320077C900 /* HowToRecycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF112D320CAF6320077C900 /* HowToRecycle.swift */; };
+		FFF112D620CAF7BD0077C900 /* HowToRecycleMC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF112D520CAF7BD0077C900 /* HowToRecycleMC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3288FA84EBCD6795D73A56FD /* Pods-UpCycle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UpCycle.release.xcconfig"; path = "Pods/Target Support Files/Pods-UpCycle/Pods-UpCycle.release.xcconfig"; sourceTree = "<group>"; };
 		3C02049D01D619CB61DFEE4B /* Pods_UpCycle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UpCycle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AC578AE0F3820E8CC7612B7 /* Pods-UpCycle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UpCycle.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UpCycle/Pods-UpCycle.debug.xcconfig"; sourceTree = "<group>"; };
+		FF8B63DF20CF39E3004ABD39 /* Montserrat-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Montserrat-Thin.otf"; path = "../../../../../montserrat/Montserrat-Thin.otf"; sourceTree = "<group>"; };
+		FF8B63E020CF39E3004ABD39 /* MontserratAlternates-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "MontserratAlternates-ExtraBold.otf"; path = "../../../../../montserrat/MontserratAlternates-ExtraBold.otf"; sourceTree = "<group>"; };
+		FF8B63E120CF39E3004ABD39 /* Montserrat-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Montserrat-Medium.otf"; path = "../../../../../montserrat/Montserrat-Medium.otf"; sourceTree = "<group>"; };
+		FF8B63E520CF3A67004ABD39 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		FFB717F120C5BFB900AD5645 /* UpCycle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UpCycle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFB717F420C5BFBA00AD5645 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFB717F920C5BFBA00AD5645 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FFB717FB20C5BFBB00AD5645 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FFB717FE20C5BFBB00AD5645 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		FFB7180020C5BFBB00AD5645 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FFB7180620C5D1A700AD5645 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		FFB7180820C5D1D500AD5645 /* RecycleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecycleViewController.swift; sourceTree = "<group>"; };
 		FFB7180A20C5D1E600AD5645 /* ShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
@@ -48,8 +62,14 @@
 		FFB7181920C5D2DF00AD5645 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		FFB7181B20C5DBB000AD5645 /* UserAgreementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAgreementViewController.swift; sourceTree = "<group>"; };
 		FFB7181F20C725E000AD5645 /* RecycleCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecycleCenter.swift; sourceTree = "<group>"; };
-		FFB7182120C73C0700AD5645 /* RecycleCenterMoCo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecycleCenterMoCo.swift; sourceTree = "<group>"; };
+		FFB7182120C73C0700AD5645 /* RecycleCenterMC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecycleCenterMC.swift; sourceTree = "<group>"; };
 		FFB7182320C7760600AD5645 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		FFDD068D20CED44800E65BD5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "UpCycle/GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		FFDD068F20CED4DE00E65BD5 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../../../../../../../.Trash/Info.plist; sourceTree = "<group>"; };
+		FFF112CD20CAE6190077C900 /* PlacePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PlacePickerViewController.swift; path = "UpCycle/View Controllers/PlacePickerViewController.swift"; sourceTree = SOURCE_ROOT; };
+		FFF112D120CAF6060077C900 /* HowToRecycleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToRecycleTableViewCell.swift; sourceTree = "<group>"; };
+		FFF112D320CAF6320077C900 /* HowToRecycle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToRecycle.swift; sourceTree = "<group>"; };
+		FFF112D520CAF7BD0077C900 /* HowToRecycleMC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToRecycleMC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +135,7 @@
 		FFB7181620C5D26E00AD5645 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				FFF112CD20CAE6190077C900 /* PlacePickerViewController.swift */,
 				FFB7180620C5D1A700AD5645 /* MapViewController.swift */,
 				FFB7180820C5D1D500AD5645 /* RecycleViewController.swift */,
 				FFB7180A20C5D1E600AD5645 /* ShopViewController.swift */,
@@ -125,6 +146,7 @@
 				FFB7181420C5D25300AD5645 /* PostViewController.swift */,
 				FFB7181920C5D2DF00AD5645 /* HomeViewController.swift */,
 				FFB7181B20C5DBB000AD5645 /* UserAgreementViewController.swift */,
+				FFF112D120CAF6060077C900 /* HowToRecycleTableViewCell.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -132,10 +154,15 @@
 		FFB7181720C5D29700AD5645 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				FF8B63E120CF39E3004ABD39 /* Montserrat-Medium.otf */,
+				FF8B63DF20CF39E3004ABD39 /* Montserrat-Thin.otf */,
+				FF8B63E020CF39E3004ABD39 /* MontserratAlternates-ExtraBold.otf */,
+				FFDD068D20CED44800E65BD5 /* GoogleService-Info.plist */,
 				FFB717F420C5BFBA00AD5645 /* AppDelegate.swift */,
 				FFB717FB20C5BFBB00AD5645 /* Assets.xcassets */,
 				FFB717FD20C5BFBB00AD5645 /* LaunchScreen.storyboard */,
-				FFB7180020C5BFBB00AD5645 /* Info.plist */,
+				FFDD068F20CED4DE00E65BD5 /* Info.plist */,
+				FF8B63E520CF3A67004ABD39 /* Constants.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -152,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				FFB7181F20C725E000AD5645 /* RecycleCenter.swift */,
+				FFF112D320CAF6320077C900 /* HowToRecycle.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -159,7 +187,8 @@
 		FFB7181E20C6E78100AD5645 /* Model Controller */ = {
 			isa = PBXGroup;
 			children = (
-				FFB7182120C73C0700AD5645 /* RecycleCenterMoCo.swift */,
+				FFB7182120C73C0700AD5645 /* RecycleCenterMC.swift */,
+				FFF112D520CAF7BD0077C900 /* HowToRecycleMC.swift */,
 			);
 			path = "Model Controller";
 			sourceTree = "<group>";
@@ -176,6 +205,7 @@
 				FFB717EE20C5BFB900AD5645 /* Frameworks */,
 				FFB717EF20C5BFB900AD5645 /* Resources */,
 				171F9244F13B6C6F2781200D /* [CP] Copy Pods Resources */,
+				BF1A8628B7541800B7AC2D43 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -224,9 +254,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF8B63E720CF4AE2004ABD39 /* Constants.swift in Resources */,
 				FFB717FF20C5BFBB00AD5645 /* LaunchScreen.storyboard in Resources */,
+				FF8B63E320CF39E4004ABD39 /* MontserratAlternates-ExtraBold.otf in Resources */,
 				FFB7182420C7760700AD5645 /* Default-568h@2x.png in Resources */,
+				FF8B63E220CF39E4004ABD39 /* Montserrat-Thin.otf in Resources */,
+				FFDD069020CED4DE00E65BD5 /* Info.plist in Resources */,
+				FFDD068E20CED44800E65BD5 /* GoogleService-Info.plist in Resources */,
 				FFB717FC20C5BFBB00AD5645 /* Assets.xcassets in Resources */,
+				FF8B63E420CF39E4004ABD39 /* Montserrat-Medium.otf in Resources */,
 				FFB717FA20C5BFBA00AD5645 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -242,11 +278,13 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-UpCycle/Pods-UpCycle-resources.sh",
 				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlacePicker/Frameworks/GooglePlacePicker.framework/Resources/GooglePlacePicker.bundle",
 				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlacePicker.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,6 +310,30 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		BF1A8628B7541800B7AC2D43 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-UpCycle/Pods-UpCycle-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UpCycle/Pods-UpCycle-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -279,10 +341,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FFB7182220C73C0700AD5645 /* RecycleCenterMoCo.swift in Sources */,
+				FFF112D220CAF6060077C900 /* HowToRecycleTableViewCell.swift in Sources */,
+				FFB7182220C73C0700AD5645 /* RecycleCenterMC.swift in Sources */,
 				FFB7180920C5D1D500AD5645 /* RecycleViewController.swift in Sources */,
 				FFB7180B20C5D1E600AD5645 /* ShopViewController.swift in Sources */,
 				FFB7182020C725E000AD5645 /* RecycleCenter.swift in Sources */,
+				FFF112D620CAF7BD0077C900 /* HowToRecycleMC.swift in Sources */,
+				FFF112D420CAF6320077C900 /* HowToRecycle.swift in Sources */,
+				FFF112CE20CAE6190077C900 /* PlacePickerViewController.swift in Sources */,
 				FFB7180F20C5D21300AD5645 /* ViewProjectViewController.swift in Sources */,
 				FFB7181520C5D25300AD5645 /* PostViewController.swift in Sources */,
 				FFB7181C20C5DBB000AD5645 /* UserAgreementViewController.swift in Sources */,
@@ -292,6 +358,7 @@
 				FFB7181320C5D23C00AD5645 /* SignUpViewController.swift in Sources */,
 				FFB7180720C5D1A700AD5645 /* MapViewController.swift in Sources */,
 				FFB717F520C5BFBA00AD5645 /* AppDelegate.swift in Sources */,
+				FF8B63E620CF3A67004ABD39 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,7 +505,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A6SH4SB8PT;
-				INFOPLIST_FILE = "$(SRCROOT)/UpCycle/Resources/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/../../../../../.Trash/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -446,7 +513,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.KimLundquist.UpCycle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -457,7 +524,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A6SH4SB8PT;
-				INFOPLIST_FILE = "$(SRCROOT)/UpCycle/Resources/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/../../../../../.Trash/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -465,7 +532,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.KimLundquist.UpCycle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

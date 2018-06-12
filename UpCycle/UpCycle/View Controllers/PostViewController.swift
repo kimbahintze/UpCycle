@@ -7,29 +7,62 @@
 //
 
 import UIKit
+import FirebaseStorage
+import FirebaseDatabase
 
-class PostViewController: UIViewController {
+class PostViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    @IBOutlet weak var postProjectImage: UIImageView!
+    @IBOutlet weak var postProjectTitleLabel: UITextField!
+    @IBOutlet weak var postInstructionsTextView: UITextView!
 
+    
+    let picker = UIImagePickerController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        postProjectImage.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleProjectImage)))
+        postProjectImage.isUserInteractionEnabled = true
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @objc func handleProjectImage() {
+        picker.delegate = self
+        picker.allowsEditing = true
+        present(picker, animated: true, completion: nil)
     }
     
+    // choose an image from the library
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        
+        var selectedImageFromPicker: UIImage?
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if let editedImage = info["UIImagePickerControllerEditedImage"] as? UIImage {
+            selectedImageFromPicker = editedImage
+        } else if let originalImage = info["UIImagePickerControllerOriginalImage"] as? UIImage {
+           selectedImageFromPicker = originalImage
+        }
+        if let selectedImage = selectedImageFromPicker {
+            postProjectImage.image = selectedImage
+        }
+        dismiss(animated: true, completion: nil)
     }
-    */
-
+  
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        print("canceled picker")
+        dismiss(animated: true, completion: nil)
+    }
+    
+    // save or cancel the post
+    @IBAction func savePost(_ sender: Any) {
+    }
+    
+    @IBAction func cancelUpload(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    // access camera
+    @IBAction func takePicture(_ sender: Any) {
+    }
+    
 }
