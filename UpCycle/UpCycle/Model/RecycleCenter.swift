@@ -7,22 +7,20 @@
 //
 
 import Foundation
+import GoogleMaps
 
 struct RecycleCenterDictionary: Decodable {
-    let KEYWORDs: [RecycleCenter]
+    let results: [RecycleCenter]
 }
 
 struct RecycleCenter: Decodable {
-//    let NAME:
-//    let ADDRESS:
-//    let DETAIL:
-//
-//    enum CodingKeys: String, CodingKey {
-//        case name = ""
-//        case address = ""
-//        case detail = ""
-//    }
+    let name: String
+    let placeID: String
     
+    enum CodingKeys: String, CodingKey {
+        case name = "name"
+        case placeID = "id"
+    }
 }
 
 extension URL {
