@@ -13,7 +13,7 @@ import GooglePlacePicker
 
 class MapViewController: UIViewController, CLLocationManagerDelegate, GMSMapViewDelegate, UITextViewDelegate {
     
-//    @IBOutlet weak var mapaView: UIView!
+    @IBOutlet weak var mapaView: UIView!
     var placesClient: GMSPlacesClient!
     
     @IBOutlet var nameLabel: UILabel!
@@ -25,7 +25,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, GMSMapView
     override func viewDidLoad() {
         super.viewDidLoad()
         placesClient = GMSPlacesClient.shared()
-        attributionTextView.delegate = self 
+//        attributionTextView.delegate = self
     }
     
     @IBAction func getCurrentPlace(_ sender: UIButton) {

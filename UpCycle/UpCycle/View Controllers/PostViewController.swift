@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 import FirebaseStorage
 import FirebaseDatabase
 
@@ -24,16 +25,15 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         postProjectImage.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleProjectImage)))
         postProjectImage.isUserInteractionEnabled = true
     }
-
+    
+   // choose an image from the library
     @objc func handleProjectImage() {
         picker.delegate = self
         picker.allowsEditing = true
         present(picker, animated: true, completion: nil)
     }
     
-    // choose an image from the library
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
-        
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         var selectedImageFromPicker: UIImage?
 
         if let editedImage = info["UIImagePickerControllerEditedImage"] as? UIImage {
@@ -46,7 +46,6 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         }
         dismiss(animated: true, completion: nil)
     }
-  
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         print("canceled picker")
@@ -63,6 +62,7 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     
     // access camera
     @IBAction func takePicture(_ sender: Any) {
+        
     }
     
 }

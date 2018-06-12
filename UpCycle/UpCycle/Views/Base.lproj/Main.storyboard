@@ -140,7 +140,7 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="addressLabel" destination="r0w-Bd-8dj" id="cKS-Mq-VCA"/>
-                        <outlet property="mapaView" destination="Yme-y2-Q1S" id="TBo-RW-cK9"/>
+                        <outlet property="mapaView" destination="Yme-y2-Q1S" id="ElG-e6-shB"/>
                         <outlet property="nameLabel" destination="SaZ-Ft-XcK" id="Jj0-6s-Q8L"/>
                         <segue destination="oi1-H4-mhA" kind="show" id="U0a-t1-RKU"/>
                     </connections>
@@ -533,7 +533,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="QbP-eH-HUw">
                                 <rect key="frame" x="25" y="70" width="325" height="547"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <mutableString key="text">End-User License Agreement 
+                                <string key="text">End-User License Agreement 
 
 Last updated: June 11, 2018
 
@@ -584,7 +584,7 @@ UPCYCLE** reserves the right, at its sole discretion, to modify or replace this 
 
 Contact Information
 
-If you have any questions about this Agreement, please contact us.</mutableString>
+If you have any questions about this Agreement, please contact us.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
