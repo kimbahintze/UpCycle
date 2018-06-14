@@ -13,19 +13,22 @@ import GooglePlacePicker
 
 class MapViewController: UIViewController, CLLocationManagerDelegate, GMSMapViewDelegate, UITextViewDelegate {
     
-    @IBOutlet weak var mapaView: UIView!
-    var placesClient: GMSPlacesClient!
+    let placesClient = GMSPlacesClient()
+    
+    var recycleCenter: RecycleCenter?
     
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var addressLabel: UILabel!
-    @IBOutlet var attributionTextView: UITextView!
+    var mapView: GMSMapView?
+    
+    // @IBOutlet var attributionTextView: UITextView!
     
     var placePicker: GMSPlacePickerViewController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        placesClient = GMSPlacesClient.shared()
-//        attributionTextView.delegate = self
+        generateMarkers()
+        mapView?.delegate = self
     }
     
     @IBAction func getCurrentPlace(_ sender: UIButton) {
@@ -46,6 +49,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, GMSMapView
             }
         }
     }
+    
     let VIEWPORT_LATLING = CLLocationCoordinate2DMake(40.761938, -111.890909)
     let VIEWPORT_DELTA = 0.001
     
@@ -55,41 +59,58 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, GMSMapView
         let viewport = GMSCoordinateBounds(coordinate: northEast, coordinate: southWest)
         let config = GMSPlacePickerConfig(viewport: viewport)
         let placePicker = GMSPlacePickerViewController(config: config)
-
-//        placePicker.pickPlaceWithCallback({ (place: GMSPlace?,error: NSError?) -> Void in
-//            self.nameLabel.text = ""
-//            self.attributionTextView.text = ""
-//
-//            if error != nil {
-//                self.nameLabel.text = error?.localizedDescription
-//                return
-//            }
-//
-//            if place != nil {
-//                self.nameLabel.text = place?.name
-//                self.attributionTextView.attributedText = place?.attributions
-//            } else {
-//                self.nameLabel.text = "No place selected"
-//            }
-//        })
     }
     
+    func generateMarkers() {
+        RecycleCenterMC.shared.recycleCenters.forEach { (recycleCenter) in
+            placesClient.lookUpPlaceID(recycleCenter.placeID, callback: { (place, error) in
+                if let error = error {
+                    print(error)
+                }
+                guard let place = place else { return }
+                let marker = GMSMarker()
+                marker.position = place.coordinate
+                marker.title = place.name
+                marker.snippet = place.phoneNumber
+                marker.map = self.mapView
+
+                // tap gesture recognizer?
+            })
+        }
+    }
+   
     override func loadView() {
         // Create a GMSCameraPosition that tells the map to display
         let camera = GMSCameraPosition.camera(withLatitude: 40.761938, longitude: -111.890909, zoom: 10.0)
-        let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
-        
-        mapView.isMyLocationEnabled = true
-        mapView.settings.compassButton = true
+        let mapView = GMSMapView.map(withFrame: .zero, camera: camera)
         mapView.settings.myLocationButton = true
+        mapView.settings.compassButton = true
         mapView.setMinZoom(5, maxZoom: 20)
         view = mapView
-
-       
+        self.mapView = mapView
     }
-   
-    func mapView(_ mapView: GMSMapView, didTapPOIWithPlaceID placeID: String, name: String, location: CLLocationCoordinate2D) {
-        print("You tapped \(name): \(placeID), \(location.latitude)/\(location.longitude)")
+
+    func mapView(_ mapView: GMSMapView, markerInfoWindow marker: GMSMarker) -> UIView? {
+        let view = UIView(frame: CGRect.init(x: 0, y: 0, width: 200, height: 70))
+        view.backgroundColor = UIColor.white
+        view.layer.cornerRadius = 6
+        guard let recycleCenter = recycleCenter else { return nil }
+        let lbl1 = UILabel(frame: CGRect.init(x: 8, y: 8, width: view.frame.size.width - 16, height: 15))
+        lbl1.text = recycleCenter.name
+        view.addSubview(lbl1)
+
+        let lbl2 = UILabel(frame: CGRect.init(x: lbl1.frame.origin.x, y: lbl1.frame.origin.y + lbl1.frame.size.height + 3, width: view.frame.size.width - 16, height: 15))
+        lbl2.text = recycleCenter.address
+        lbl2.font = UIFont.systemFont(ofSize: 14, weight: .light)
+        view.addSubview(lbl2)
+
+        return view
     }
 }
+    func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
+        print("marker tapped")
+        return true
+    }
+    
+
 

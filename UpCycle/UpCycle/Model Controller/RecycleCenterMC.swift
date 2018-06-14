@@ -10,7 +10,9 @@
 import UIKit
 
 class RecycleCenterMC {
+    
  static let shared = RecycleCenterMC()
+    
     var recycleCenters = [RecycleCenter]()
     
     let baseURL = URL(string: "https://maps.googleapis.com/maps/api/place/nearbysearch/json?")!
@@ -19,9 +21,9 @@ class RecycleCenterMC {
         
         let queries = [
             "location": "40.70, -111.90",
-            "radius": "5000",
+            "radius": "60000",
             "type": "business",
-            "keyword": "recycling",
+            "keyword": searchTerm,
             "key": "AIzaSyA35cvA1paV4yN7zJuvSWOQIldKuZZzubw"
         ]
         

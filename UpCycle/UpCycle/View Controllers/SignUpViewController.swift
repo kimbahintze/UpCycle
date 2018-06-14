@@ -51,7 +51,7 @@ class SignUpViewController: UIViewController {
                 return
             }
             guard let uuid = Auth.auth().currentUser?.uid else { return }
-            Database.database().reference().child("users").child(uuid).setValue(["username": username, "email": email, "onboarding": "false"])
+            Database.database().reference().child("users").child(uuid).setValue(["username": username, "email": email, "postID": "false"])
             
             let sb = UIStoryboard(name: "Main", bundle: nil)
             let postVC = sb.instantiateViewController(withIdentifier: "Post")

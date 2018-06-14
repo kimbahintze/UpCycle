@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		858ABE970D796E12C7AAEC1D /* Pods_UpCycle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C02049D01D619CB61DFEE4B /* Pods_UpCycle.framework */; };
+		FF1FFC7420D0E6350090A21E /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1FFC7320D0E6350090A21E /* Post.swift */; };
+		FF1FFC7620D0E6BF0090A21E /* PostMC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1FFC7520D0E6BF0090A21E /* PostMC.swift */; };
+		FF1FFC7820D2E9840090A21E /* CustomProjectCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1FFC7720D2E9840090A21E /* CustomProjectCollectionViewCell.swift */; };
 		FF8B63E220CF39E4004ABD39 /* Montserrat-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = FF8B63DF20CF39E3004ABD39 /* Montserrat-Thin.otf */; };
 		FF8B63E320CF39E4004ABD39 /* MontserratAlternates-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = FF8B63E020CF39E3004ABD39 /* MontserratAlternates-ExtraBold.otf */; };
 		FF8B63E420CF39E4004ABD39 /* Montserrat-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = FF8B63E120CF39E3004ABD39 /* Montserrat-Medium.otf */; };
@@ -42,6 +45,9 @@
 		3288FA84EBCD6795D73A56FD /* Pods-UpCycle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UpCycle.release.xcconfig"; path = "Pods/Target Support Files/Pods-UpCycle/Pods-UpCycle.release.xcconfig"; sourceTree = "<group>"; };
 		3C02049D01D619CB61DFEE4B /* Pods_UpCycle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UpCycle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AC578AE0F3820E8CC7612B7 /* Pods-UpCycle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UpCycle.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UpCycle/Pods-UpCycle.debug.xcconfig"; sourceTree = "<group>"; };
+		FF1FFC7320D0E6350090A21E /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		FF1FFC7520D0E6BF0090A21E /* PostMC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostMC.swift; sourceTree = "<group>"; };
+		FF1FFC7720D2E9840090A21E /* CustomProjectCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomProjectCollectionViewCell.swift; sourceTree = "<group>"; };
 		FF8B63DF20CF39E3004ABD39 /* Montserrat-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Montserrat-Thin.otf"; path = "../../../../../montserrat/Montserrat-Thin.otf"; sourceTree = "<group>"; };
 		FF8B63E020CF39E3004ABD39 /* MontserratAlternates-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "MontserratAlternates-ExtraBold.otf"; path = "../../../../../montserrat/MontserratAlternates-ExtraBold.otf"; sourceTree = "<group>"; };
 		FF8B63E120CF39E3004ABD39 /* Montserrat-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Montserrat-Medium.otf"; path = "../../../../../montserrat/Montserrat-Medium.otf"; sourceTree = "<group>"; };
@@ -135,17 +141,18 @@
 		FFB7181620C5D26E00AD5645 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				FFB7181920C5D2DF00AD5645 /* HomeViewController.swift */,
+				FFB7181220C5D23C00AD5645 /* SignUpViewController.swift */,
+				FFB7181B20C5DBB000AD5645 /* UserAgreementViewController.swift */,
+				FFB7181020C5D22400AD5645 /* LoginViewController.swift */,
 				FFF112CD20CAE6190077C900 /* PlacePickerViewController.swift */,
 				FFB7180620C5D1A700AD5645 /* MapViewController.swift */,
-				FFB7180820C5D1D500AD5645 /* RecycleViewController.swift */,
-				FFB7180A20C5D1E600AD5645 /* ShopViewController.swift */,
 				FFB7180C20C5D1FF00AD5645 /* ReuseViewController.swift */,
+				FF1FFC7720D2E9840090A21E /* CustomProjectCollectionViewCell.swift */,
 				FFB7180E20C5D21300AD5645 /* ViewProjectViewController.swift */,
-				FFB7181020C5D22400AD5645 /* LoginViewController.swift */,
-				FFB7181220C5D23C00AD5645 /* SignUpViewController.swift */,
 				FFB7181420C5D25300AD5645 /* PostViewController.swift */,
-				FFB7181920C5D2DF00AD5645 /* HomeViewController.swift */,
-				FFB7181B20C5DBB000AD5645 /* UserAgreementViewController.swift */,
+				FFB7180A20C5D1E600AD5645 /* ShopViewController.swift */,
+				FFB7180820C5D1D500AD5645 /* RecycleViewController.swift */,
 				FFF112D120CAF6060077C900 /* HowToRecycleTableViewCell.swift */,
 			);
 			path = "View Controllers";
@@ -180,6 +187,7 @@
 			children = (
 				FFB7181F20C725E000AD5645 /* RecycleCenter.swift */,
 				FFF112D320CAF6320077C900 /* HowToRecycle.swift */,
+				FF1FFC7320D0E6350090A21E /* Post.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -189,6 +197,7 @@
 			children = (
 				FFB7182120C73C0700AD5645 /* RecycleCenterMC.swift */,
 				FFF112D520CAF7BD0077C900 /* HowToRecycleMC.swift */,
+				FF1FFC7520D0E6BF0090A21E /* PostMC.swift */,
 			);
 			path = "Model Controller";
 			sourceTree = "<group>";
@@ -319,6 +328,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-UpCycle/Pods-UpCycle-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -326,6 +336,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -341,7 +352,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF1FFC7820D2E9840090A21E /* CustomProjectCollectionViewCell.swift in Sources */,
 				FFF112D220CAF6060077C900 /* HowToRecycleTableViewCell.swift in Sources */,
+				FF1FFC7620D0E6BF0090A21E /* PostMC.swift in Sources */,
 				FFB7182220C73C0700AD5645 /* RecycleCenterMC.swift in Sources */,
 				FFB7180920C5D1D500AD5645 /* RecycleViewController.swift in Sources */,
 				FFB7180B20C5D1E600AD5645 /* ShopViewController.swift in Sources */,
@@ -357,6 +370,7 @@
 				FFB7180D20C5D1FF00AD5645 /* ReuseViewController.swift in Sources */,
 				FFB7181320C5D23C00AD5645 /* SignUpViewController.swift in Sources */,
 				FFB7180720C5D1A700AD5645 /* MapViewController.swift in Sources */,
+				FF1FFC7420D0E6350090A21E /* Post.swift in Sources */,
 				FFB717F520C5BFBA00AD5645 /* AppDelegate.swift in Sources */,
 				FF8B63E620CF3A67004ABD39 /* Constants.swift in Sources */,
 			);

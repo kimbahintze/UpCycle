@@ -19,10 +19,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        GMSServices.provideAPIKey("AIzaSyCbffDbUYEt9ierBuwvx14NG0RJeYZI7D4")
-        GMSPlacesClient.provideAPIKey("AIzaSyA35cvA1paV4yN7zJuvSWOQIldKuZZzubw")
+        GMSServices.provideAPIKey("AIzaSyBiMimCuuC7S7PqGiJnSPBhHsWE7OULIBY")
+        GMSPlacesClient.provideAPIKey("AIzaSyBiMimCuuC7S7PqGiJnSPBhHsWE7OULIBY")
         FirebaseApp.configure()
-        
+        RecycleCenterMC.shared.fetchRecycleCenters(with: "recycling") { (_) in
+            
+        }
         return true
     }
 

@@ -16,10 +16,13 @@ struct RecycleCenterDictionary: Decodable {
 struct RecycleCenter: Decodable {
     let name: String
     let placeID: String
+    let address: String
+    
     
     enum CodingKeys: String, CodingKey {
         case name = "name"
-        case placeID = "id"
+        case placeID = "place_id"
+        case address = "vicinity"
     }
 }
 
