@@ -15,28 +15,34 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var howToButton: UIButton!
     @IBOutlet weak var reuseButton: UIButton!
     @IBOutlet weak var shopButton: UIButton!
+    @IBOutlet weak var logoImage: UIImageView!
+    @IBOutlet weak var upLabel: UILabel!
+    @IBOutlet weak var cycleLabel: UILabel!
+    @IBOutlet weak var shopLabel: UILabel!
+    @IBOutlet weak var centerLabel: UILabel!
+    @IBOutlet weak var howToLabel: UILabel!
+    @IBOutlet weak var reuseLabel: UILabel!
+    @IBOutlet weak var slcLabel: UILabel!
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        design()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.isNavigationBarHidden = true
     }
-    */
-
+    
+    func design() {
+        upLabel.textColor = darkerGreen
+        cycleLabel.textColor = darkGrayColor
+        slcLabel.textColor = darkGrayColor
+        upLabel.font = UIFont(name: "Montserrat-Medium", size: 33)
+        cycleLabel.font = UIFont(name: "Montserrat-Medium", size: 30)
+        slcLabel.font = UIFont(name: "Montserrat-Medium", size: 30)
+        shopLabel.font = UIFont(name: "Montserrat-Thin", size: 13)
+        centerLabel.font = UIFont(name: "Montserrat-Thin", size: 13)
+        howToLabel.font = UIFont(name: "Montserrat-Thin", size: 13)
+        reuseLabel.font = UIFont(name: "Montserrat-Thin", size: 13)
+    }
 }

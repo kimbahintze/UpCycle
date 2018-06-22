@@ -43,16 +43,15 @@ class SignUpViewController: UIViewController {
         guard let password = passwordTextField.text, !password.isEmpty else { return }
         guard let confirmPW = confirmPasswordTextField.text, !confirmPW.isEmpty else { return }
         
-        
         Auth.auth().createUser(withEmail: email, password: password) { (dataresult, error) in
             if let error = error {
                 print("Error creating user: \(error.localizedDescription)")
                 self.duplicateUser()
                 return
             }
+            
             guard let uuid = Auth.auth().currentUser?.uid else { return }
             Database.database().reference().child("users").child(uuid).setValue(["username": username, "email": email, "postID": "false"])
-            
             let sb = UIStoryboard(name: "Main", bundle: nil)
             let postVC = sb.instantiateViewController(withIdentifier: "Post")
             self.present(postVC, animated: true, completion: nil)
@@ -94,7 +93,6 @@ class SignUpViewController: UIViewController {
         passwordTextField.font = UIFont(name: "Montserrat-Medium", size: 12)
         signupButton.titleLabel?.font = UIFont(name: "MontserratAlternates-ExtraBold", size: 13)
     }
-    
 }
 
 extension SignUpViewController: UITextFieldDelegate {

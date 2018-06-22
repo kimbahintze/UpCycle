@@ -13,15 +13,15 @@ class Post: Codable, Equatable {
     let userID: String
     var projectTitle: String
     var projectInstructions: String
-//    let timeStamp: TimeInterval
-
+    let postID: String
+    var flags: Int?
     
-    init(projectPicURLAsString: String, userID: String, projectTitle: String, projectInstructions: String) {
+    init(projectPicURLAsString: String, userID: String, projectTitle: String, projectInstructions: String, postID: String) {
         self.projectPicURLAsString = projectPicURLAsString
         self.userID = userID
         self.projectTitle = projectTitle
         self.projectInstructions = projectInstructions
-    //    self.timeStamp =
+        self.postID = postID
     }
     
     func returnPostAsDictionary() -> NSDictionary {
@@ -29,7 +29,9 @@ class Post: Codable, Equatable {
             "projectPicURLAsString": projectPicURLAsString,
             "userID": userID,
             "projectTitle": projectTitle,
-            "projectInstructions": projectInstructions
+            "projectInstructions": projectInstructions,
+            "postID": postID,
+            "flags" : flags ?? 0
         ]
         return postDictionary
     }

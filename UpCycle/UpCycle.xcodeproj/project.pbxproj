@@ -10,12 +10,11 @@
 		858ABE970D796E12C7AAEC1D /* Pods_UpCycle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C02049D01D619CB61DFEE4B /* Pods_UpCycle.framework */; };
 		FF1FFC7420D0E6350090A21E /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1FFC7320D0E6350090A21E /* Post.swift */; };
 		FF1FFC7620D0E6BF0090A21E /* PostMC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1FFC7520D0E6BF0090A21E /* PostMC.swift */; };
-		FF1FFC7820D2E9840090A21E /* CustomProjectCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1FFC7720D2E9840090A21E /* CustomProjectCollectionViewCell.swift */; };
-		FF8B63E220CF39E4004ABD39 /* Montserrat-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = FF8B63DF20CF39E3004ABD39 /* Montserrat-Thin.otf */; };
-		FF8B63E320CF39E4004ABD39 /* MontserratAlternates-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = FF8B63E020CF39E3004ABD39 /* MontserratAlternates-ExtraBold.otf */; };
-		FF8B63E420CF39E4004ABD39 /* Montserrat-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = FF8B63E120CF39E3004ABD39 /* Montserrat-Medium.otf */; };
-		FF8B63E620CF3A67004ABD39 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8B63E520CF3A67004ABD39 /* Constants.swift */; };
-		FF8B63E720CF4AE2004ABD39 /* Constants.swift in Resources */ = {isa = PBXBuildFile; fileRef = FF8B63E520CF3A67004ABD39 /* Constants.swift */; };
+		FF71989320DC58F700EF9942 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF71989220DC58F700EF9942 /* StoreKit.framework */; };
+		FF71989520DC7B3A00EF9942 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF71989420DC7B3A00EF9942 /* Common.swift */; };
+		FF9D236720DAD41C00D24DEC /* MaterialToRecycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9D236620DAD41C00D24DEC /* MaterialToRecycle.swift */; };
+		FF9D236920DAD49400D24DEC /* MaterialToRecycleMC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9D236820DAD49400D24DEC /* MaterialToRecycleMC.swift */; };
+		FF9D236B20DAF99000D24DEC /* RecycleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9D236A20DAF99000D24DEC /* RecycleDetailViewController.swift */; };
 		FFB717F520C5BFBA00AD5645 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB717F420C5BFBA00AD5645 /* AppDelegate.swift */; };
 		FFB717FA20C5BFBA00AD5645 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFB717F820C5BFBA00AD5645 /* Main.storyboard */; };
 		FFB717FC20C5BFBB00AD5645 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFB717FB20C5BFBB00AD5645 /* Assets.xcassets */; };
@@ -23,8 +22,8 @@
 		FFB7180720C5D1A700AD5645 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB7180620C5D1A700AD5645 /* MapViewController.swift */; };
 		FFB7180920C5D1D500AD5645 /* RecycleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB7180820C5D1D500AD5645 /* RecycleViewController.swift */; };
 		FFB7180B20C5D1E600AD5645 /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB7180A20C5D1E600AD5645 /* ShopViewController.swift */; };
-		FFB7180D20C5D1FF00AD5645 /* ReuseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB7180C20C5D1FF00AD5645 /* ReuseViewController.swift */; };
-		FFB7180F20C5D21300AD5645 /* ViewProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB7180E20C5D21300AD5645 /* ViewProjectViewController.swift */; };
+		FFB7180D20C5D1FF00AD5645 /* ProjectCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB7180C20C5D1FF00AD5645 /* ProjectCollectionViewController.swift */; };
+		FFB7180F20C5D21300AD5645 /* ProjectDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB7180E20C5D21300AD5645 /* ProjectDetailViewController.swift */; };
 		FFB7181120C5D22400AD5645 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB7181020C5D22400AD5645 /* LoginViewController.swift */; };
 		FFB7181320C5D23C00AD5645 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB7181220C5D23C00AD5645 /* SignUpViewController.swift */; };
 		FFB7181520C5D25300AD5645 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB7181420C5D25300AD5645 /* PostViewController.swift */; };
@@ -32,11 +31,12 @@
 		FFB7181C20C5DBB000AD5645 /* UserAgreementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB7181B20C5DBB000AD5645 /* UserAgreementViewController.swift */; };
 		FFB7182020C725E000AD5645 /* RecycleCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB7181F20C725E000AD5645 /* RecycleCenter.swift */; };
 		FFB7182220C73C0700AD5645 /* RecycleCenterMC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB7182120C73C0700AD5645 /* RecycleCenterMC.swift */; };
-		FFB7182420C7760700AD5645 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FFB7182320C7760600AD5645 /* Default-568h@2x.png */; };
+		FFC8CE2620D824E7004ECDCF /* ProjectBasicInfoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC8CE2520D824E7004ECDCF /* ProjectBasicInfoCollectionViewCell.swift */; };
+		FFC8CE2920D9A81E004ECDCF /* ShoppingList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC8CE2820D9A81E004ECDCF /* ShoppingList.swift */; };
+		FFC8CE2B20D9A8A3004ECDCF /* ShoppingListMC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC8CE2A20D9A8A3004ECDCF /* ShoppingListMC.swift */; };
+		FFC8CE2D20D9ACF3004ECDCF /* ShoppingItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC8CE2C20D9ACF3004ECDCF /* ShoppingItemCollectionViewCell.swift */; };
 		FFDD068E20CED44800E65BD5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FFDD068D20CED44800E65BD5 /* GoogleService-Info.plist */; };
-		FFDD069020CED4DE00E65BD5 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FFDD068F20CED4DE00E65BD5 /* Info.plist */; };
 		FFF112CE20CAE6190077C900 /* PlacePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF112CD20CAE6190077C900 /* PlacePickerViewController.swift */; };
-		FFF112D220CAF6060077C900 /* HowToRecycleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF112D120CAF6060077C900 /* HowToRecycleTableViewCell.swift */; };
 		FFF112D420CAF6320077C900 /* HowToRecycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF112D320CAF6320077C900 /* HowToRecycle.swift */; };
 		FFF112D620CAF7BD0077C900 /* HowToRecycleMC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF112D520CAF7BD0077C900 /* HowToRecycleMC.swift */; };
 /* End PBXBuildFile section */
@@ -47,11 +47,15 @@
 		9AC578AE0F3820E8CC7612B7 /* Pods-UpCycle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UpCycle.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UpCycle/Pods-UpCycle.debug.xcconfig"; sourceTree = "<group>"; };
 		FF1FFC7320D0E6350090A21E /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		FF1FFC7520D0E6BF0090A21E /* PostMC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostMC.swift; sourceTree = "<group>"; };
-		FF1FFC7720D2E9840090A21E /* CustomProjectCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomProjectCollectionViewCell.swift; sourceTree = "<group>"; };
-		FF8B63DF20CF39E3004ABD39 /* Montserrat-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Montserrat-Thin.otf"; path = "../../../../../montserrat/Montserrat-Thin.otf"; sourceTree = "<group>"; };
-		FF8B63E020CF39E3004ABD39 /* MontserratAlternates-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "MontserratAlternates-ExtraBold.otf"; path = "../../../../../montserrat/MontserratAlternates-ExtraBold.otf"; sourceTree = "<group>"; };
-		FF8B63E120CF39E3004ABD39 /* Montserrat-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Montserrat-Medium.otf"; path = "../../../../../montserrat/Montserrat-Medium.otf"; sourceTree = "<group>"; };
-		FF8B63E520CF3A67004ABD39 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		FF71989220DC58F700EF9942 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		FF71989420DC7B3A00EF9942 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		FF71989620DC7C4400EF9942 /* Montserrat-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Montserrat-Thin.otf"; path = "../../../../../../../.Trash/Montserrat-Thin.otf"; sourceTree = "<group>"; };
+		FF71989720DC7C4400EF9942 /* Montserrat-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Montserrat-Medium.otf"; path = "../../../../../../../.Trash/Montserrat-Medium.otf"; sourceTree = "<group>"; };
+		FF71989820DC7C4400EF9942 /* MontserratAlternates-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "MontserratAlternates-ExtraBold.otf"; path = "../../../../../../../.Trash/MontserratAlternates-ExtraBold.otf"; sourceTree = "<group>"; };
+		FF71989B20DCA83800EF9942 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../../../../../../../.Trash/Default-568h@2x.png"; sourceTree = "<group>"; };
+		FF9D236620DAD41C00D24DEC /* MaterialToRecycle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialToRecycle.swift; sourceTree = "<group>"; };
+		FF9D236820DAD49400D24DEC /* MaterialToRecycleMC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialToRecycleMC.swift; sourceTree = "<group>"; };
+		FF9D236A20DAF99000D24DEC /* RecycleDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecycleDetailViewController.swift; sourceTree = "<group>"; };
 		FFB717F120C5BFB900AD5645 /* UpCycle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UpCycle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFB717F420C5BFBA00AD5645 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFB717F920C5BFBA00AD5645 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -60,8 +64,8 @@
 		FFB7180620C5D1A700AD5645 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		FFB7180820C5D1D500AD5645 /* RecycleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecycleViewController.swift; sourceTree = "<group>"; };
 		FFB7180A20C5D1E600AD5645 /* ShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
-		FFB7180C20C5D1FF00AD5645 /* ReuseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReuseViewController.swift; sourceTree = "<group>"; };
-		FFB7180E20C5D21300AD5645 /* ViewProjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewProjectViewController.swift; sourceTree = "<group>"; };
+		FFB7180C20C5D1FF00AD5645 /* ProjectCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectCollectionViewController.swift; sourceTree = "<group>"; };
+		FFB7180E20C5D21300AD5645 /* ProjectDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailViewController.swift; sourceTree = "<group>"; };
 		FFB7181020C5D22400AD5645 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		FFB7181220C5D23C00AD5645 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		FFB7181420C5D25300AD5645 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
@@ -69,11 +73,14 @@
 		FFB7181B20C5DBB000AD5645 /* UserAgreementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAgreementViewController.swift; sourceTree = "<group>"; };
 		FFB7181F20C725E000AD5645 /* RecycleCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecycleCenter.swift; sourceTree = "<group>"; };
 		FFB7182120C73C0700AD5645 /* RecycleCenterMC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecycleCenterMC.swift; sourceTree = "<group>"; };
-		FFB7182320C7760600AD5645 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		FFC8CE2520D824E7004ECDCF /* ProjectBasicInfoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectBasicInfoCollectionViewCell.swift; sourceTree = "<group>"; };
+		FFC8CE2720D973C9004ECDCF /* UpCycle.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = UpCycle.entitlements; sourceTree = "<group>"; };
+		FFC8CE2820D9A81E004ECDCF /* ShoppingList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingList.swift; sourceTree = "<group>"; };
+		FFC8CE2A20D9A8A3004ECDCF /* ShoppingListMC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListMC.swift; sourceTree = "<group>"; };
+		FFC8CE2C20D9ACF3004ECDCF /* ShoppingItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingItemCollectionViewCell.swift; sourceTree = "<group>"; };
 		FFDD068D20CED44800E65BD5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "UpCycle/GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		FFDD068F20CED4DE00E65BD5 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../../../../../../../.Trash/Info.plist; sourceTree = "<group>"; };
 		FFF112CD20CAE6190077C900 /* PlacePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PlacePickerViewController.swift; path = "UpCycle/View Controllers/PlacePickerViewController.swift"; sourceTree = SOURCE_ROOT; };
-		FFF112D120CAF6060077C900 /* HowToRecycleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToRecycleTableViewCell.swift; sourceTree = "<group>"; };
 		FFF112D320CAF6320077C900 /* HowToRecycle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToRecycle.swift; sourceTree = "<group>"; };
 		FFF112D520CAF7BD0077C900 /* HowToRecycleMC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToRecycleMC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -84,6 +91,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				858ABE970D796E12C7AAEC1D /* Pods_UpCycle.framework in Frameworks */,
+				FF71989320DC58F700EF9942 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +101,7 @@
 		69210D5A1AE5BA69B89BDF3A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FF71989220DC58F700EF9942 /* StoreKit.framework */,
 				3C02049D01D619CB61DFEE4B /* Pods_UpCycle.framework */,
 			);
 			name = Frameworks;
@@ -110,7 +119,6 @@
 		FFB717E820C5BFB900AD5645 = {
 			isa = PBXGroup;
 			children = (
-				FFB7182320C7760600AD5645 /* Default-568h@2x.png */,
 				FFB717F320C5BFBA00AD5645 /* UpCycle */,
 				FFB717F220C5BFB900AD5645 /* Products */,
 				F8C576C4DC13FAA45C5FE7FD /* Pods */,
@@ -129,6 +137,7 @@
 		FFB717F320C5BFBA00AD5645 /* UpCycle */ = {
 			isa = PBXGroup;
 			children = (
+				FFC8CE2720D973C9004ECDCF /* UpCycle.entitlements */,
 				FFB7181D20C6E77300AD5645 /* Model */,
 				FFB7181E20C6E78100AD5645 /* Model Controller */,
 				FFB7181820C5D2A800AD5645 /* Views */,
@@ -147,13 +156,14 @@
 				FFB7181020C5D22400AD5645 /* LoginViewController.swift */,
 				FFF112CD20CAE6190077C900 /* PlacePickerViewController.swift */,
 				FFB7180620C5D1A700AD5645 /* MapViewController.swift */,
-				FFB7180C20C5D1FF00AD5645 /* ReuseViewController.swift */,
-				FF1FFC7720D2E9840090A21E /* CustomProjectCollectionViewCell.swift */,
-				FFB7180E20C5D21300AD5645 /* ViewProjectViewController.swift */,
+				FFB7180C20C5D1FF00AD5645 /* ProjectCollectionViewController.swift */,
+				FFC8CE2520D824E7004ECDCF /* ProjectBasicInfoCollectionViewCell.swift */,
+				FFB7180E20C5D21300AD5645 /* ProjectDetailViewController.swift */,
 				FFB7181420C5D25300AD5645 /* PostViewController.swift */,
 				FFB7180A20C5D1E600AD5645 /* ShopViewController.swift */,
+				FFC8CE2C20D9ACF3004ECDCF /* ShoppingItemCollectionViewCell.swift */,
 				FFB7180820C5D1D500AD5645 /* RecycleViewController.swift */,
-				FFF112D120CAF6060077C900 /* HowToRecycleTableViewCell.swift */,
+				FF9D236A20DAF99000D24DEC /* RecycleDetailViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -161,15 +171,16 @@
 		FFB7181720C5D29700AD5645 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				FF8B63E120CF39E3004ABD39 /* Montserrat-Medium.otf */,
-				FF8B63DF20CF39E3004ABD39 /* Montserrat-Thin.otf */,
-				FF8B63E020CF39E3004ABD39 /* MontserratAlternates-ExtraBold.otf */,
+				FF71989720DC7C4400EF9942 /* Montserrat-Medium.otf */,
+				FF71989620DC7C4400EF9942 /* Montserrat-Thin.otf */,
+				FF71989B20DCA83800EF9942 /* Default-568h@2x.png */,
+				FF71989820DC7C4400EF9942 /* MontserratAlternates-ExtraBold.otf */,
 				FFDD068D20CED44800E65BD5 /* GoogleService-Info.plist */,
 				FFB717F420C5BFBA00AD5645 /* AppDelegate.swift */,
 				FFB717FB20C5BFBB00AD5645 /* Assets.xcassets */,
 				FFB717FD20C5BFBB00AD5645 /* LaunchScreen.storyboard */,
 				FFDD068F20CED4DE00E65BD5 /* Info.plist */,
-				FF8B63E520CF3A67004ABD39 /* Constants.swift */,
+				FF71989420DC7B3A00EF9942 /* Common.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -188,6 +199,8 @@
 				FFB7181F20C725E000AD5645 /* RecycleCenter.swift */,
 				FFF112D320CAF6320077C900 /* HowToRecycle.swift */,
 				FF1FFC7320D0E6350090A21E /* Post.swift */,
+				FFC8CE2820D9A81E004ECDCF /* ShoppingList.swift */,
+				FF9D236620DAD41C00D24DEC /* MaterialToRecycle.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -198,6 +211,8 @@
 				FFB7182120C73C0700AD5645 /* RecycleCenterMC.swift */,
 				FFF112D520CAF7BD0077C900 /* HowToRecycleMC.swift */,
 				FF1FFC7520D0E6BF0090A21E /* PostMC.swift */,
+				FFC8CE2A20D9A8A3004ECDCF /* ShoppingListMC.swift */,
+				FF9D236820DAD49400D24DEC /* MaterialToRecycleMC.swift */,
 			);
 			path = "Model Controller";
 			sourceTree = "<group>";
@@ -237,6 +252,14 @@
 				TargetAttributes = {
 					FFB717F020C5BFB900AD5645 = {
 						CreatedOnToolsVersion = 9.3.1;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
+							com.apple.SafariKeychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -263,15 +286,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF8B63E720CF4AE2004ABD39 /* Constants.swift in Resources */,
 				FFB717FF20C5BFBB00AD5645 /* LaunchScreen.storyboard in Resources */,
-				FF8B63E320CF39E4004ABD39 /* MontserratAlternates-ExtraBold.otf in Resources */,
-				FFB7182420C7760700AD5645 /* Default-568h@2x.png in Resources */,
-				FF8B63E220CF39E4004ABD39 /* Montserrat-Thin.otf in Resources */,
-				FFDD069020CED4DE00E65BD5 /* Info.plist in Resources */,
 				FFDD068E20CED44800E65BD5 /* GoogleService-Info.plist in Resources */,
 				FFB717FC20C5BFBB00AD5645 /* Assets.xcassets in Resources */,
-				FF8B63E420CF39E4004ABD39 /* Montserrat-Medium.otf in Resources */,
 				FFB717FA20C5BFBA00AD5645 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -352,27 +369,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF1FFC7820D2E9840090A21E /* CustomProjectCollectionViewCell.swift in Sources */,
-				FFF112D220CAF6060077C900 /* HowToRecycleTableViewCell.swift in Sources */,
 				FF1FFC7620D0E6BF0090A21E /* PostMC.swift in Sources */,
 				FFB7182220C73C0700AD5645 /* RecycleCenterMC.swift in Sources */,
+				FF71989520DC7B3A00EF9942 /* Common.swift in Sources */,
+				FFC8CE2920D9A81E004ECDCF /* ShoppingList.swift in Sources */,
+				FF9D236720DAD41C00D24DEC /* MaterialToRecycle.swift in Sources */,
 				FFB7180920C5D1D500AD5645 /* RecycleViewController.swift in Sources */,
 				FFB7180B20C5D1E600AD5645 /* ShopViewController.swift in Sources */,
 				FFB7182020C725E000AD5645 /* RecycleCenter.swift in Sources */,
 				FFF112D620CAF7BD0077C900 /* HowToRecycleMC.swift in Sources */,
 				FFF112D420CAF6320077C900 /* HowToRecycle.swift in Sources */,
 				FFF112CE20CAE6190077C900 /* PlacePickerViewController.swift in Sources */,
-				FFB7180F20C5D21300AD5645 /* ViewProjectViewController.swift in Sources */,
+				FFB7180F20C5D21300AD5645 /* ProjectDetailViewController.swift in Sources */,
 				FFB7181520C5D25300AD5645 /* PostViewController.swift in Sources */,
+				FFC8CE2620D824E7004ECDCF /* ProjectBasicInfoCollectionViewCell.swift in Sources */,
+				FFC8CE2D20D9ACF3004ECDCF /* ShoppingItemCollectionViewCell.swift in Sources */,
 				FFB7181C20C5DBB000AD5645 /* UserAgreementViewController.swift in Sources */,
 				FFB7181120C5D22400AD5645 /* LoginViewController.swift in Sources */,
+				FFC8CE2B20D9A8A3004ECDCF /* ShoppingListMC.swift in Sources */,
 				FFB7181A20C5D2DF00AD5645 /* HomeViewController.swift in Sources */,
-				FFB7180D20C5D1FF00AD5645 /* ReuseViewController.swift in Sources */,
+				FFB7180D20C5D1FF00AD5645 /* ProjectCollectionViewController.swift in Sources */,
 				FFB7181320C5D23C00AD5645 /* SignUpViewController.swift in Sources */,
+				FF9D236920DAD49400D24DEC /* MaterialToRecycleMC.swift in Sources */,
 				FFB7180720C5D1A700AD5645 /* MapViewController.swift in Sources */,
+				FF9D236B20DAF99000D24DEC /* RecycleDetailViewController.swift in Sources */,
 				FF1FFC7420D0E6350090A21E /* Post.swift in Sources */,
 				FFB717F520C5BFBA00AD5645 /* AppDelegate.swift in Sources */,
-				FF8B63E620CF3A67004ABD39 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -517,6 +539,7 @@
 			baseConfigurationReference = 9AC578AE0F3820E8CC7612B7 /* Pods-UpCycle.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = UpCycle/UpCycle.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A6SH4SB8PT;
 				INFOPLIST_FILE = "$(SRCROOT)/../../../../../.Trash/Info.plist";
@@ -536,6 +559,7 @@
 			baseConfigurationReference = 3288FA84EBCD6795D73A56FD /* Pods-UpCycle.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = UpCycle/UpCycle.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A6SH4SB8PT;
 				INFOPLIST_FILE = "$(SRCROOT)/../../../../../.Trash/Info.plist";
