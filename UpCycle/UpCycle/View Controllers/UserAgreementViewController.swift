@@ -19,8 +19,7 @@ class UserAgreementViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         userAgreementTextView.layer.cornerRadius = 15
+        userAgreementTextView.isEditable = false
+        userAgreementTextView.font = UIFont(name: "Montserrat-Thin", size: 14)
     }
-
-   
-
 }

@@ -8,28 +8,23 @@
 
 import Foundation
 
-struct HowToRecycleDictionary: Decodable {
-    let results: [HowToRecycle]
-}
-
-struct HowToRecycle: Decodable {
-    let name: String
-    let howTo: String
-    let specialInstructions: String?
+class HowToRecycle: Codable {
+    let material: String?
+    let info: String?
     
-    enum CodingKeys: String, CodingKey {
-        case name = "material_title"
-        case howTo = "stream_title"
-        case specialInstructions = "special_instructions"
+    init(material: String?, info: String?) {
+        self.material = material
+        self.info = info
+    }
+    
+    init?(jsonDictionary: [String: Any]) {
+    guard let material = jsonDictionary["material"] as? String, let info = jsonDictionary["info"] as? String else { return nil }
+        self.material = material
+        self.info = info
     }
 }
-//
-//extension URL {
-//    func withQueries(_ queries: [String: String]) -> URL? {
-//        var components = URLComponents(url: self,
-//                                       resolvingAgainstBaseURL: true)
-//        components?.queryItems = queries.compactMap
-//            { URLQueryItem(name: $0.0, value: $0.1) }
-//        return components?.url
-//    }
-//}
+
+extension HowToRecycle: Equatable {}
+    func ==(lhs: HowToRecycle, rhs: HowToRecycle) -> Bool {
+        return lhs.material == rhs.material && lhs.info == rhs.info
+}

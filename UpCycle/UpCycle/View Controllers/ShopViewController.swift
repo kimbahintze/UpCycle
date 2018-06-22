@@ -8,28 +8,43 @@
 
 import UIKit
 
-class ShopViewController: UIViewController {
-
+class ShopViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    @IBOutlet weak var shoppingCollectionView: UICollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        shoppingCollectionView.delegate = self
+        shoppingCollectionView.dataSource = self
+        navigationController?.isNavigationBarHidden = false
+        navigationItem.titleView = logoTitleView()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return ShoppingListMC.shoppingListItems.count
     }
-    */
-
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = shoppingCollectionView.dequeueReusableCell(withReuseIdentifier: "shoppingCell", for: indexPath) as! ShoppingItemCollectionViewCell
+        let shoppingItem = ShoppingListMC.shoppingListItems[indexPath.row]
+        cell.itemNameLabel.text = shoppingItem.name
+        let shoppingImage = UIImage(named: shoppingItem.picture)
+        cell.itemImageThumbnail.image = shoppingImage
+        cell.itemNameLabel.font = UIFont(name: "Montserrat-Medium", size: 11)
+        cell.itemNameLabel.textAlignment = .center
+        cell.itemImageThumbnail.contentMode = .scaleAspectFit
+        cell.itemImageThumbnail.clipsToBounds = true
+        cell.itemImageThumbnail.layer.cornerRadius = 15
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
+        let shoppingItem = ShoppingListMC.shoppingListItems[indexPath.row]
+        let shoppingURL = URL(string: shoppingItem.UrlAsString)
+        UIApplication.shared.open(shoppingURL!, options: [:], completionHandler: nil)
+    }
 }

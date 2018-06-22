@@ -7,8 +7,12 @@
 //
 
 import Foundation
+import FirebaseAuth
+import FirebaseDatabase
 
 class HowToRecycleMC {
-    
-    let baseURL = URL(string: "https://data.edmonton.ca/resource/kx42-g5ky.json")
+   static let shared = HowToRecycleMC()
+    var index: Int = 0
+    var baseURL = URL(string: "https://upcycle-1528217976799.firebaseio.com/")
+    let ref = Database.database().reference(withPath: "howToRecycle")
 }

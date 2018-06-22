@@ -17,6 +17,9 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     @IBOutlet weak var postProjectImage: UIImageView!
     @IBOutlet weak var postProjectTextField: UITextField!
     @IBOutlet weak var postInstructionsTextView: UITextView!
+    @IBOutlet weak var saveButton: UIButton!
+    @IBOutlet weak var cancelButton: UIButton!
+    
     
     var storageRef: StorageReference!
     var databaseRef: DatabaseReference!
@@ -27,9 +30,10 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         super.viewDidLoad()
         storageRef = Storage.storage().reference()
         databaseRef = Database.database().reference()
-        
+        design()
         postProjectImage.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleProjectImage)))
         postProjectImage.isUserInteractionEnabled = true
+        
     }
     
     // Choose an image from the library
@@ -86,6 +90,7 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
                         print(error!)
                         return
                     }
+                    
                     if let imageURL = url?.absoluteString {
                         self.databaseRef.observeSingleEvent(of: .value, with: { (snapshot) in
                             _ = snapshot.value as? NSDictionary
@@ -93,7 +98,7 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
                             
                             let projectPicURLAsString = imageURL
                             
-                            let newPost = Post(projectPicURLAsString: projectPicURLAsString, userID: userID, projectTitle: postTitle, projectInstructions: postInstructions)
+                            let newPost = Post(projectPicURLAsString: projectPicURLAsString, userID: userID, projectTitle: postTitle, projectInstructions: postInstructions, postID: postID)
                             
                             // store post in the dictionary
                             let postRef = self.databaseRef.child("posts").child(postID)
@@ -129,4 +134,31 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
+    
+    func design() {
+        postProjectImage.layer.cornerRadius = 15
+        postProjectTextField.font = UIFont(name: "Montserrat-Medium", size: 15)
+        postInstructionsTextView.font = UIFont(name: "Montserrat-Thin", size: 13)
+    }
 }
+
+extension PostViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        switch textField {
+        case postProjectTextField:
+            postProjectTextField.resignFirstResponder()
+            postInstructionsTextView.becomeFirstResponder()
+            break
+        case postInstructionsTextView:
+            break
+        default:
+            break
+        }
+        return true
+    }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+    }
+}
+
+

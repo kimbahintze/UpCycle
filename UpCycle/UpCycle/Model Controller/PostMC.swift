@@ -15,32 +15,29 @@ class PostMC {
     
     static var shared = PostMC()
     
+    func flagPost(_ post: Post) {
+        fetchFlagQuestionCount(post: post) { (count) in
+            guard let count = count else { return }
+            let postID = NSUUID().uuidString
+            if count == 2 {
+                Database.database().reference().child("posts/\(postID)").removeValue()
+            } else {
+                Database.database().reference().child("posts/\(postID)").updateChildValues(["flagCount": count + 1])
+                print("posted to firebase")
+            }
+        }
+    }
     
-    // var index: Int = 0
-
-    var baseURL = URL(string: "https://upcycle-1528217976799.firebaseio.com/")
-//    
-//    enum NotificationKey {
-//        static let reloadCollectionView = Notification.Name("reloadCollectionView")
-//    }
-//    
-//    var posts: [Post] = [] {
-//        didSet {
-//            NotificationCenter.default.post(name: NotificationKey.reloadCollectionView, object: nil)
-//        }
-//    }
-//   
-//    private func fetchPosts(completion: @escaping() -> Void) {
-//        Database.database().reference().child("posts").observeSingleEvent(of: .value) { (snapshot) in
-//            if let postDictionary = snapshot.value as? [String: Any] {
-//                var fetchedPost: [Post] = []
-//                postDictionary.forEach({ (key, value) in
-//                    guard let postDict = value as? [String: Any] else { completion(); return }
-//                    guard let newPost = Post(
-//                })
-//            }
-//        }
-//    }
-    
+    private func fetchFlagQuestionCount(post: Post, completion: @escaping(Int?) -> Void) {
+        let postID = NSUUID().uuidString
+        Database.database().reference().child("posts/\(postID)").observeSingleEvent(of: .value) { (snapshot) in
+            if let dictionary = snapshot.value as? [String:Any] {
+                guard let count = dictionary["flagcount"] as? Int else { return }
+                completion(count)
+            } else {
+                completion(nil)
+            }
+        }
+    }
 }
 
