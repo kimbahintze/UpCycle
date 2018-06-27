@@ -34,11 +34,15 @@ class ShopViewController: UIViewController, UICollectionViewDelegate, UICollecti
         cell.itemNameLabel.text = shoppingItem.name
         let shoppingImage = UIImage(named: shoppingItem.picture)
         cell.itemImageThumbnail.image = shoppingImage
-        cell.itemNameLabel.font = UIFont(name: "Montserrat-Medium", size: 11)
-        cell.itemNameLabel.textAlignment = .center
         cell.itemImageThumbnail.contentMode = .scaleAspectFit
         cell.itemImageThumbnail.clipsToBounds = true
-        cell.itemImageThumbnail.layer.cornerRadius = 15
+        cell.itemImageThumbnail.layer.cornerRadius = 10
+        cell.itemNameLabel.font = UIFont(name: MontserratMedium, size: 11)
+        cell.itemNameLabel.textAlignment = .center
+        cell.itemNameLabel.textColor = darkerGreen
+        cell.itemImageThumbnail.layer.borderColor = darkerGreen.cgColor
+        cell.itemImageThumbnail.layer.borderWidth = 1
+        
         return cell
     }
     

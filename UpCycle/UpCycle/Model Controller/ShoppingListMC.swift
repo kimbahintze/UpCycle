@@ -46,7 +46,17 @@ class ShoppingListMC {
         
         let probag = ShoppingList(name: "Produce Bags", picture: "prob", UrlAsString: "https://www.amazon.com/Reusable-Produce-Vegetables-Through-Polyester/dp/B07B89LW2N/ref=ice_ac_b_dpb?s=kitchen&ie=UTF8&qid=1529429785&sr=1-7&keywords=reusable+produce+bags")
         
-        return [floss, makeUpRemover, mCup, bamTwl, bamToB, watBot, masJar, proSav, straws, zips, bees, handky, napkins, box, tupWr, shop, probag]
+        let norwex = ShoppingList(name: "Cleaning Supplies", picture: "cleaning", UrlAsString: "https://www.amazon.com/Norwex-Household-Package-PLus-Plus/dp/B00EG7NSX4/ref=sr_1_5?ie=UTF8&qid=1530107214&sr=8-5&keywords=norwex")
+        
+        let dryerBalls = ShoppingList(name: "Dryer Balls", picture: "dryerBalls", UrlAsString: "https://www.amazon.com/OUNONA-Dryer-Organic-Softener-Laundry/dp/B06ZYPP17M/ref=sr_1_1?s=industrial&rps=1&ie=UTF8&qid=1530107680&sr=1-1&keywords=wool+dryer+balls&refinements=p_85%3A2470955011")
+        
+        let wrappingPaper = ShoppingList(name: "Gift Wrap", picture: "wrappingpaper", UrlAsString: "https://www.amazon.com/Gift-Wrap-Pack-Stretchy-Celebration/dp/B01DCPRC9G/ref=sr_1_5_a_it?ie=UTF8&qid=1530108004&sr=8-5&keywords=reusable%2Bgift%2Bwrap&th=1")
+        
+        let muffinTins = ShoppingList(name: "Muffin Tins", picture: "muffins", UrlAsString: "https://www.amazon.com/AmazonBasics-Reusable-Silicone-Baking-Cups/dp/B01KWTGAVQ/ref=sr_1_5?ie=UTF8&qid=1530108594&sr=8-5&keywords=reusable+muffin+liner")
+        
+        let bakingMat = ShoppingList(name: "Baking Mat", picture: "bakingMat", UrlAsString: "https://www.amazon.com/AmazonBasics-Silicone-Baking-Mat-2-Pack/dp/B0725GYNG6/ref=sr_1_6?ie=UTF8&qid=1530108754&sr=8-6&keywords=silicone+baking")
+        
+        return [floss, makeUpRemover, bamTwl, bamToB, watBot, masJar, proSav, straws, zips, bees, handky, mCup,napkins, box, tupWr, shop, probag, norwex, dryerBalls, wrappingPaper, muffinTins, bakingMat]
     }
 }
 

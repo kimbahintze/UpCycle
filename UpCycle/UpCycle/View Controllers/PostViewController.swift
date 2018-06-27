@@ -19,6 +19,8 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     @IBOutlet weak var postInstructionsTextView: UITextView!
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var cancelButton: UIButton!
+    @IBOutlet weak var addLabel: UILabel!
+    @IBOutlet weak var logoutButton: UIButton!
     
     
     var storageRef: StorageReference!
@@ -135,10 +137,24 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         self.present(alert, animated: true, completion: nil)
     }
     
+    @IBAction func logoutButtonTapped(_ sender: Any) {
+        do {
+            try Auth.auth().signOut()
+            self.dismiss(animated: true, completion: nil)
+        } catch let error {
+            print(error.localizedDescription)
+        }
+    }
+    
     func design() {
         postProjectImage.layer.cornerRadius = 15
         postProjectTextField.font = UIFont(name: "Montserrat-Medium", size: 15)
         postInstructionsTextView.font = UIFont(name: "Montserrat-Thin", size: 13)
+        addLabel.textColor = darkGrayColor
+        addLabel.font = UIFont(name: MontserratMedium, size: 11)
+        saveButton.titleLabel?.font = UIFont(name: MontserratMedium, size: 15)
+        cancelButton.titleLabel?.font = UIFont(name: MontserratMedium, size: 15)
+        logoutButton.titleLabel?.font = UIFont(name: MontserratMedium, size: 15)
     }
 }
 

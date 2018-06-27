@@ -10,7 +10,6 @@ import UIKit
 
 public let MontserratMedium = "Montserrat-Medium"
 public let MontserratThin = "Montserrat-Thin"
-public let MontserratBold = "MontserratAlternates-ExtraBold"
 
 let lighterGreen = UIColor(red: 35/255, green: 193/255, blue: 129/255, alpha: 1.0)
 let darkerGreen = UIColor(red: 13/255, green: 155/255, blue: 121/255, alpha: 1.0)

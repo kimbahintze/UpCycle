@@ -48,7 +48,7 @@ class RecycleViewController: UIViewController, UITableViewDataSource, UITableVie
         let cell = recycleInfoTableView.dequeueReusableCell(withIdentifier: "howToRecycleCell", for: indexPath)
         let material = materialsToRecycle[indexPath.row]
         cell.textLabel?.text = material.material
-        cell.textLabel?.font = UIFont(name: "Montserrat-Medium", size: 12)
+        cell.textLabel?.font = UIFont(name: "Montserrat-Medium", size: 16)
         cell.imageView?.clipsToBounds = true
         cell.imageView?.layer.cornerRadius = 15
         return cell

@@ -10,7 +10,7 @@ import UIKit
 import FirebaseAuth
 
 class LoginViewController: UIViewController {
-
+    
     @IBOutlet weak var welcomeLabel: UILabel!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -31,6 +31,11 @@ class LoginViewController: UIViewController {
         super.viewWillAppear(animated)
         emailTextField.text = nil
         passwordTextField.text = nil
+    }
+    
+    @IBAction func forgotPasswordButtonTapped(_ sender: Any) {
+        guard let email = emailTextField.text else { return }
+        resetPassword(email: email)
     }
     
     func resetPassword(email: String) {
@@ -67,32 +72,32 @@ class LoginViewController: UIViewController {
     }
     
     @objc func validateEmail() {
-        var isFormValid = emailTextField.text?.count ?? 0 > 0 &&
-        passwordTextField.text?.count ?? 0 > 0
+        let isFormValid = emailTextField.text?.count ?? 0 > 0 &&
+            passwordTextField.text?.count ?? 0 > 0
         
         if isFormValid {
             loginButton.isEnabled = true
         } else {
             loginButton.isEnabled = false
         }
-        
-        if emailTextField != passwordTextField {
-            isFormValid = false
-        }
     }
     
     func setFonts() {
         welcomeLabel.font = UIFont(name: "Montserrat-Medium", size: 45)
+        welcomeLabel.textColor = darkerGreen
         emailTextField.font = UIFont(name: "Montserrat-Medium", size: 15)
         passwordTextField.font = UIFont(name: "Montserrat-Medium", size: 15)
-        forgotPasswordButton.titleLabel?.font = UIFont(name: "Montserrat-Thin", size: 13)
+        passwordTextField.isSecureTextEntry = true
+        forgotPasswordButton.titleLabel?.font = UIFont(name: MontserratMedium, size: 12)
+        loginButton.backgroundColor = lighterGreen
+        loginButton.setTitleColor(UIColor.white, for: .normal)
+        loginButton.layer.cornerRadius = 15
         loginButton.titleLabel?.font = UIFont(name: "Montserrat-Medium", size: 18)
         notMemberLabel.font = UIFont(name: "Montserrat-Medium", size: 14)
+        notMemberLabel.textColor = darkGrayColor
+        signUpButton.setTitleColor(lighterGreen, for: .normal)
         signUpButton.titleLabel?.font = UIFont(name: "Montserrat-Medium", size: 14)
-        signUpButton.tintColor = lighterGreen
-        signUpButton.setTitleColor(UIColor.white, for: .normal)
-        signUpButton.layer.cornerRadius = 15
-        passwordTextField.isSecureTextEntry = true
+        iconLabel.font = UIFont(name: "Montserrat-Thin", size: 11)
     }
 }
 

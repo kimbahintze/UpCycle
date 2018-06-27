@@ -15,6 +15,8 @@
 		FF9D236720DAD41C00D24DEC /* MaterialToRecycle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9D236620DAD41C00D24DEC /* MaterialToRecycle.swift */; };
 		FF9D236920DAD49400D24DEC /* MaterialToRecycleMC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9D236820DAD49400D24DEC /* MaterialToRecycleMC.swift */; };
 		FF9D236B20DAF99000D24DEC /* RecycleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9D236A20DAF99000D24DEC /* RecycleDetailViewController.swift */; };
+		FF9FDB8220DD51D60052A3DF /* Montserrat-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = FF71989720DC7C4400EF9942 /* Montserrat-Medium.otf */; };
+		FF9FDB8320DD51DA0052A3DF /* Montserrat-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = FF71989620DC7C4400EF9942 /* Montserrat-Thin.otf */; };
 		FFB717F520C5BFBA00AD5645 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB717F420C5BFBA00AD5645 /* AppDelegate.swift */; };
 		FFB717FA20C5BFBA00AD5645 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFB717F820C5BFBA00AD5645 /* Main.storyboard */; };
 		FFB717FC20C5BFBB00AD5645 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFB717FB20C5BFBB00AD5645 /* Assets.xcassets */; };
@@ -51,7 +53,6 @@
 		FF71989420DC7B3A00EF9942 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		FF71989620DC7C4400EF9942 /* Montserrat-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Montserrat-Thin.otf"; path = "../../../../../../../.Trash/Montserrat-Thin.otf"; sourceTree = "<group>"; };
 		FF71989720DC7C4400EF9942 /* Montserrat-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Montserrat-Medium.otf"; path = "../../../../../../../.Trash/Montserrat-Medium.otf"; sourceTree = "<group>"; };
-		FF71989820DC7C4400EF9942 /* MontserratAlternates-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "MontserratAlternates-ExtraBold.otf"; path = "../../../../../../../.Trash/MontserratAlternates-ExtraBold.otf"; sourceTree = "<group>"; };
 		FF71989B20DCA83800EF9942 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../../../../../../../.Trash/Default-568h@2x.png"; sourceTree = "<group>"; };
 		FF9D236620DAD41C00D24DEC /* MaterialToRecycle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialToRecycle.swift; sourceTree = "<group>"; };
 		FF9D236820DAD49400D24DEC /* MaterialToRecycleMC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialToRecycleMC.swift; sourceTree = "<group>"; };
@@ -154,8 +155,8 @@
 				FFB7181220C5D23C00AD5645 /* SignUpViewController.swift */,
 				FFB7181B20C5DBB000AD5645 /* UserAgreementViewController.swift */,
 				FFB7181020C5D22400AD5645 /* LoginViewController.swift */,
-				FFF112CD20CAE6190077C900 /* PlacePickerViewController.swift */,
 				FFB7180620C5D1A700AD5645 /* MapViewController.swift */,
+				FFF112CD20CAE6190077C900 /* PlacePickerViewController.swift */,
 				FFB7180C20C5D1FF00AD5645 /* ProjectCollectionViewController.swift */,
 				FFC8CE2520D824E7004ECDCF /* ProjectBasicInfoCollectionViewCell.swift */,
 				FFB7180E20C5D21300AD5645 /* ProjectDetailViewController.swift */,
@@ -174,7 +175,6 @@
 				FF71989720DC7C4400EF9942 /* Montserrat-Medium.otf */,
 				FF71989620DC7C4400EF9942 /* Montserrat-Thin.otf */,
 				FF71989B20DCA83800EF9942 /* Default-568h@2x.png */,
-				FF71989820DC7C4400EF9942 /* MontserratAlternates-ExtraBold.otf */,
 				FFDD068D20CED44800E65BD5 /* GoogleService-Info.plist */,
 				FFB717F420C5BFBA00AD5645 /* AppDelegate.swift */,
 				FFB717FB20C5BFBB00AD5645 /* Assets.xcassets */,
@@ -287,6 +287,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FFB717FF20C5BFBB00AD5645 /* LaunchScreen.storyboard in Resources */,
+				FF9FDB8320DD51DA0052A3DF /* Montserrat-Thin.otf in Resources */,
+				FF9FDB8220DD51D60052A3DF /* Montserrat-Medium.otf in Resources */,
 				FFDD068E20CED44800E65BD5 /* GoogleService-Info.plist in Resources */,
 				FFB717FC20C5BFBB00AD5645 /* Assets.xcassets in Resources */,
 				FFB717FA20C5BFBA00AD5645 /* Main.storyboard in Resources */,

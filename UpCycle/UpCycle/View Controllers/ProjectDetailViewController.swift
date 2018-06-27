@@ -45,7 +45,7 @@ class ProjectDetailViewController: UIViewController {
                                "projectTitle": post.projectTitle,
                                "reporterUID": Auth.auth().currentUser?.uid]
             
-            flaggedPostRef.updateChildValues(flaggedDict)
+            flaggedPostRef.updateChildValues(flaggedDict as Any as! [AnyHashable : Any])
             
             let flagCountRef = flaggedPostRef.child("flagCount")
             flagCountRef.runTransactionBlock { (mutableData) -> TransactionResult in
