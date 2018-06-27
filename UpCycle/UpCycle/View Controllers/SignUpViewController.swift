@@ -18,21 +18,21 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var confirmPasswordTextField: UITextField!
     @IBOutlet weak var signupButton: UIButton!
+    @IBOutlet weak var eulaLabel: UILabel!
+    @IBOutlet weak var eulaButton: UIButton!
+    @IBOutlet weak var memberLabel: UILabel!
+    @IBOutlet weak var loginButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         usernameTextField.delegate = self
-        emailTextField.delegate = self
-        passwordTextField.delegate = self
-        confirmPasswordTextField.delegate = self
-        passwordTextField.isSecureTextEntry = true
-        confirmPasswordTextField.isSecureTextEntry = true
         usernameTextField.addTarget(self, action: #selector(validateForm), for: .editingChanged)
+        emailTextField.delegate = self
         emailTextField.addTarget(self, action: #selector(validateForm), for: .editingChanged)
+        passwordTextField.delegate = self
+        passwordTextField.isSecureTextEntry = true
         passwordTextField.addTarget(self, action: #selector(validateForm), for: .editingChanged)
-        confirmPasswordTextField.addTarget(self, action: #selector(validateForm), for: .editingChanged)
         validateForm()
         setFonts()
     }
@@ -41,7 +41,6 @@ class SignUpViewController: UIViewController {
         guard let username = usernameTextField.text, !username.isEmpty else { return }
         guard let email = emailTextField.text, !email.isEmpty else { return }
         guard let password = passwordTextField.text, !password.isEmpty else { return }
-        guard let confirmPW = confirmPasswordTextField.text, !confirmPW.isEmpty else { return }
         
         Auth.auth().createUser(withEmail: email, password: password) { (dataresult, error) in
             if let error = error {
@@ -68,12 +67,7 @@ class SignUpViewController: UIViewController {
     @objc func validateForm() {
         let isFormValid = emailTextField.text?.count ?? 0 > 0 &&
         passwordTextField.text?.count ?? 0 > 0 &&
-        confirmPasswordTextField.text?.count ?? 0 > 0 &&
         usernameTextField.text?.count ?? 0 > 0
-        
-        if passwordTextField.text != confirmPasswordTextField.text {
-            signupButton.isEnabled = false
-        }
         
         if isFormValid {
             signupButton.isEnabled = true
@@ -83,15 +77,25 @@ class SignUpViewController: UIViewController {
     }
     
     @IBAction func loginButtonTapped(_ sender: Any) {
-        navigationController?.popViewController(animated: true)
+        self.dismiss(animated: true, completion: nil)
     }
     
     func setFonts() {
-        confirmPasswordTextField.font = UIFont(name: "Montserrat-Medium", size: 12)
-        usernameTextField.font = UIFont(name: "Montserrat-Medium", size: 12)
-        emailTextField.font = UIFont(name: "Montserrat-Medium", size: 12)
-        passwordTextField.font = UIFont(name: "Montserrat-Medium", size: 12)
-        signupButton.titleLabel?.font = UIFont(name: "MontserratAlternates-ExtraBold", size: 13)
+        usernameTextField.font = UIFont(name: MontserratMedium, size: 12)
+        emailTextField.font = UIFont(name: MontserratMedium, size: 12)
+        passwordTextField.font = UIFont(name: MontserratMedium, size: 12)
+        signupButton.titleLabel?.font = UIFont(name: MontserratMedium, size: 15)
+        signupButton.setTitleColor(UIColor.white, for: .normal)
+        signupButton.backgroundColor = lighterGreen
+        signupButton.layer.cornerRadius = 15
+        eulaLabel.font = UIFont(name: MontserratMedium, size: 12)
+        eulaLabel.textColor = darkGrayColor
+        eulaButton.setTitleColor(lighterGreen, for: .normal)
+        eulaButton.titleLabel?.font = UIFont(name: MontserratMedium, size: 12)
+        memberLabel.textColor = darkGrayColor
+        memberLabel.font = UIFont(name: MontserratMedium, size: 11)
+        loginButton.titleLabel?.font = UIFont(name: MontserratMedium, size: 11)
+        loginButton.setTitleColor(lighterGreen, for: .normal)
     }
 }
 
@@ -107,10 +111,7 @@ extension SignUpViewController: UITextFieldDelegate {
             passwordTextField.becomeFirstResponder()
             break
         case passwordTextField:
-            passwordTextField.resignFirstResponder()
-            confirmPasswordTextField.becomeFirstResponder()
-        case confirmPasswordTextField:
-            break
+          break
         default:
             break
         }

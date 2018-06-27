@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import GoogleMaps
+import GoogleMapsBase
 
 struct RecycleCenterDictionary: Decodable {
     let results: [RecycleCenter]

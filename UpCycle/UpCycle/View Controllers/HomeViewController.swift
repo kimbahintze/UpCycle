@@ -36,7 +36,7 @@ class HomeViewController: UIViewController {
     func design() {
         upLabel.textColor = darkerGreen
         cycleLabel.textColor = darkGrayColor
-        slcLabel.textColor = darkGrayColor
+        slcLabel.textColor = lightGrayColor
         upLabel.font = UIFont(name: "Montserrat-Medium", size: 33)
         cycleLabel.font = UIFont(name: "Montserrat-Medium", size: 30)
         slcLabel.font = UIFont(name: "Montserrat-Medium", size: 30)
