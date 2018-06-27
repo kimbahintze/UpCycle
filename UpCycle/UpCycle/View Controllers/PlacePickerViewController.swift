@@ -7,54 +7,67 @@
 //
 
 import UIKit
-import GoogleMaps
-import GooglePlaces
+import GoogleMapsBase
 import GooglePlacePicker
 
-class PlacePickerViewController: GMSPlacePickerViewController {
+
+class PlacePickerViewController: GMSPlacePickerViewController, GMSPlacePickerViewControllerDelegate {
    
     @IBOutlet weak var infoPopup: UIView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var vicinityLabel: UILabel!
     @IBOutlet weak var placeIdLabel: UILabel!
     
- 
-    private func updateViews() {
+     var recycleCenter: RecycleCenter?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
         guard let recycleCenter = recycleCenter else { return }
+        delegate = self
         nameLabel.text = recycleCenter.name
+        nameLabel.font = UIFont(name: MontserratMedium, size: 12)
+        nameLabel.textColor = darkerGreen
         vicinityLabel.text = recycleCenter.address
+        vicinityLabel.font = UIFont(name: MontserratMedium, size: 12)
+        vicinityLabel.textColor = darkerGreen
         placeIdLabel.text = recycleCenter.placeID
+        placeIdLabel.font = UIFont(name: MontserratMedium, size: 12)
+        placeIdLabel.textColor = darkerGreen
+        navigationController?.navigationBar.isHidden = true
+        infoPopup.clipsToBounds = true
+        infoPopup.layer.cornerRadius = 15
     }
     
-    var recycleCenter: RecycleCenter? {
-        didSet {
-            updateViews()
-        }
+//    private func updateViews() {
+//        guard let recycleCenter = recycleCenter else { return }
+//        delegate = self
+//        nameLabel.text = recycleCenter.name
+//        nameLabel.font = UIFont(name: MontserratMedium, size: 12)
+//        nameLabel.textColor = darkerGreen
+//        vicinityLabel.text = recycleCenter.address
+//        vicinityLabel.font = UIFont(name: MontserratMedium, size: 12)
+//        vicinityLabel.textColor = darkerGreen
+//        placeIdLabel.text = recycleCenter.placeID
+//        placeIdLabel.font = UIFont(name: MontserratMedium, size: 12)
+//        placeIdLabel.textColor = darkerGreen
+//        navigationController?.navigationBar.isHidden = true
+//        infoPopup.clipsToBounds = true
+//        infoPopup.layer.cornerRadius = 15
+//    }
+//
+//    var recycleCenter: RecycleCenter? {
+//        didSet {
+//            updateViews()
+//        }
+//    }
+    
+    func placePicker(_ viewController: GMSPlacePickerViewController, didPick place: GMSPlace) {
+        viewController.dismiss(animated: true, completion: nil)
+        print("name \(String(describing: recycleCenter?.name))")
+        print("address \(String(describing: recycleCenter?.address))")
+        print("attributions \(String(describing: recycleCenter?.placeID))")
     }
 }
-    
-//
-//
-//    @IBAction func pickPlace(_ sender: UIButton) {
-//        let config = GMSPlacePickerConfig(viewport: nil)
-//        let placePicker = GMSPlacePickerViewController(config: config)
-//
-//        present(placePicker, animated: true, completion: nil)
-//    }
-//
-//
-//    public func placePicker(_ viewController: GMSPlacePickerViewController, didPick place: GMSPlace) {
-//        viewController.dismiss(animated: true, completion: nil)
-//        print("Place name \(place.name)")
-//        print("Place address \(String(describing: place.formattedAddress))")
-//        print("Place attributions \(String(describing: place.attributions))")
-//    }
-//
-//    public func placePickerDidCancel(_ viewController: GMSPlacePickerViewController) {
-//        viewController.dismiss(animated: true, completion: nil)
-//        print("No place selected")
-//    }
-//
 
 
 

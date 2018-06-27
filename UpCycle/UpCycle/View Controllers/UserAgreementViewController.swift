@@ -16,11 +16,15 @@ class UserAgreementViewController: UIViewController {
         view.endEditing(true)
         dismiss(animated: true, completion: nil)
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         userAgreementTextView.layer.cornerRadius = 15
+        userAgreementTextView.layer.borderColor = darkGrayColor.cgColor
+        userAgreementTextView.layer.borderWidth = 1
+        userAgreementTextView.isEditable = false
+        userAgreementTextView.font = UIFont(name: "Montserrat-Medium", size: 13)
+        userAgreementTextView.textColor = darkerGreen
+    
     }
-
-   
-
 }

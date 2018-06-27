@@ -10,30 +10,32 @@ import UIKit
 import FirebaseAuth
 
 class LoginViewController: UIViewController {
-
+    
     @IBOutlet weak var welcomeLabel: UILabel!
     @IBOutlet weak var emailTextField: UITextField!
-    @IBOutlet weak var passwordTextFIeld: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var forgotPasswordButton: UIButton!
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var notMemberLabel: UILabel!
     @IBOutlet weak var signUpButton: UIButton!
+    @IBOutlet weak var iconLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         emailTextField.delegate = self
-        passwordTextFIeld.delegate = self
+        passwordTextField.delegate = self
         setFonts()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        if Auth.auth().currentUser != nil {
-            guard let postVC = self.storyboard?.instantiateViewController(withIdentifier: "Post") else { return }
-            self.present(postVC, animated: false, completion: nil)
-        }
         emailTextField.text = nil
-        passwordTextFIeld.text = nil
+        passwordTextField.text = nil
+    }
+    
+    @IBAction func forgotPasswordButtonTapped(_ sender: Any) {
+        guard let email = emailTextField.text else { return }
+        resetPassword(email: email)
     }
     
     func resetPassword(email: String) {
@@ -51,7 +53,7 @@ class LoginViewController: UIViewController {
     
     @IBAction func loginButtonTapped(_ sender: Any) {
         guard let email = emailTextField.text, !email.isEmpty else { return }
-        guard let password = passwordTextFIeld.text, !password.isEmpty else { return }
+        guard let password = passwordTextField.text, !password.isEmpty else { return }
         
         Auth.auth().signIn(withEmail: email, password: password) { (authDataResult, error) in
             if let error = error {
@@ -71,7 +73,7 @@ class LoginViewController: UIViewController {
     
     @objc func validateEmail() {
         let isFormValid = emailTextField.text?.count ?? 0 > 0 &&
-        passwordTextFIeld.text?.count ?? 0 > 0
+            passwordTextField.text?.count ?? 0 > 0
         
         if isFormValid {
             loginButton.isEnabled = true
@@ -81,14 +83,21 @@ class LoginViewController: UIViewController {
     }
     
     func setFonts() {
-        welcomeLabel.font = UIFont(name: "MontserratAlternates-ExtraBold", size: 45)
+        welcomeLabel.font = UIFont(name: "Montserrat-Medium", size: 45)
+        welcomeLabel.textColor = darkerGreen
         emailTextField.font = UIFont(name: "Montserrat-Medium", size: 15)
-        passwordTextFIeld.font = UIFont(name: "Montserrat-Medium", size: 15)
-        forgotPasswordButton.titleLabel?.font = UIFont(name: "Montserrat-Thin", size: 13)
+        passwordTextField.font = UIFont(name: "Montserrat-Medium", size: 15)
+        passwordTextField.isSecureTextEntry = true
+        forgotPasswordButton.titleLabel?.font = UIFont(name: MontserratMedium, size: 12)
+        loginButton.backgroundColor = lighterGreen
+        loginButton.setTitleColor(UIColor.white, for: .normal)
+        loginButton.layer.cornerRadius = 15
         loginButton.titleLabel?.font = UIFont(name: "Montserrat-Medium", size: 18)
         notMemberLabel.font = UIFont(name: "Montserrat-Medium", size: 14)
+        notMemberLabel.textColor = darkGrayColor
+        signUpButton.setTitleColor(lighterGreen, for: .normal)
         signUpButton.titleLabel?.font = UIFont(name: "Montserrat-Medium", size: 14)
-        passwordTextFIeld.isSecureTextEntry = true
+        iconLabel.font = UIFont(name: "Montserrat-Thin", size: 11)
     }
 }
 

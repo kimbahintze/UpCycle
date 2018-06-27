@@ -29,6 +29,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, GMSMapView
         super.viewDidLoad()
         generateMarkers()
         mapView?.delegate = self
+        navigationController?.isNavigationBarHidden = false
+        navigationItem.titleView = logoTitleView()
     }
     
     @IBAction func getCurrentPlace(_ sender: UIButton) {
@@ -59,6 +61,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, GMSMapView
         let viewport = GMSCoordinateBounds(coordinate: northEast, coordinate: southWest)
         let config = GMSPlacePickerConfig(viewport: viewport)
         let placePicker = GMSPlacePickerViewController(config: config)
+        
+        present(placePicker, animated: true, completion: nil)
     }
     
     func generateMarkers() {
@@ -106,11 +110,14 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, GMSMapView
 
         return view
     }
-}
-    func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
-        print("marker tapped")
-        return true
-    }
     
+}
+
+//func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
+//    performSegue(withIdentifier: "toCenterDetailVC", sender: self)
+//    
+//    return true
+//}
+
 
 
