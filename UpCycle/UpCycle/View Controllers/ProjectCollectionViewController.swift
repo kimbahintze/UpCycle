@@ -50,6 +50,8 @@ class ProjectCollectionViewController: UIViewController, UICollectionViewDelegat
         cell.projectImage.sd_setImage(with: URL(string: posts[indexPath.row].projectPicURLAsString))
         cell.projectTitle.font = UIFont(name: MontserratMedium, size: 11)
         cell.projectTitle.textColor = darkerGreen
+        cell.projectTitle.font = UIFont(name: MontserratMedium, size: 11)
+        cell.projectTitle.textColor = UIColor.black
         cell.projectTitle.textAlignment = .center
         cell.projectImage.clipsToBounds = true
         cell.projectImage.layer.cornerRadius = 15
