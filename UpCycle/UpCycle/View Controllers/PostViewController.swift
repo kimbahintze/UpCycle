@@ -12,7 +12,7 @@ import FirebaseAuth
 import FirebaseStorage
 import FirebaseDatabase
 
-class PostViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class PostViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextViewDelegate {
     
     @IBOutlet weak var postProjectImage: UIImageView!
     @IBOutlet weak var postProjectTextField: UITextField!
@@ -21,7 +21,6 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var addLabel: UILabel!
     @IBOutlet weak var logoutButton: UIButton!
-    
     
     var storageRef: StorageReference!
     var databaseRef: DatabaseReference!
@@ -35,7 +34,7 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         design()
         postProjectImage.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleProjectImage)))
         postProjectImage.isUserInteractionEnabled = true
-        
+        postInstructionsTextView.delegate = self
     }
     
     // Choose an image from the library
@@ -148,13 +147,15 @@ class PostViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     
     func design() {
         postProjectImage.layer.cornerRadius = 15
-        postProjectTextField.font = UIFont(name: "Montserrat-Medium", size: 15)
-        postInstructionsTextView.font = UIFont(name: "Montserrat-Thin", size: 13)
-        addLabel.textColor = darkGrayColor
-        addLabel.font = UIFont(name: MontserratMedium, size: 11)
+        postProjectTextField.font = UIFont(name: MontserratMedium, size: 15)
+        postInstructionsTextView.font = UIFont(name: MontserratThin, size: 13)
         saveButton.titleLabel?.font = UIFont(name: MontserratMedium, size: 15)
         cancelButton.titleLabel?.font = UIFont(name: MontserratMedium, size: 15)
         logoutButton.titleLabel?.font = UIFont(name: MontserratMedium, size: 15)
+    }
+    
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        postInstructionsTextView.text = ""
     }
 }
 
